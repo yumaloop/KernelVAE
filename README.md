@@ -1,4 +1,6 @@
-# NNGP: Deep Neural Network Kernel for Gaussian Process
+# Kernel VAE
+*NNGP: Deep Neural Network Kernel for Gaussian Process*
+---
 
 TensorFlow open source implementation of
 
