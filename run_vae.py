@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-r"""Run experiments with NNGP Kernel.
+"""Run experiments with NNGP Kernel.
 
 Usage:
 
@@ -44,11 +44,14 @@ flags.DEFINE_string('experiment_dir', '/tmp/nngp',
                     'Directory to put the experiment results.')
 flags.DEFINE_string('grid_path', './grid_data',
                     'Directory to put or find the training data.')
-flags.DEFINE_integer('num_train', 1000, 'Number of training data.')
+flags.DEFINE_integer('num_train', 10000, 
+                     'Number of training data.')
 flags.DEFINE_integer('num_eval', 1000,
                      'Number of evaluation data. Use 10_000 for full eval')
-flags.DEFINE_integer('seed', 1234, 'Random number seed for data shuffling')
-flags.DEFINE_boolean('save_kernel', False, 'Save Kernel do disk')
+flags.DEFINE_integer('seed', 1234, 
+                     'Random number seed for data shuffling')
+flags.DEFINE_boolean('save_kernel', False, 
+                     'Save Kernel do disk')
 flags.DEFINE_string('dataset', 'mnist',
                     'Which dataset to use ["mnist"]')
 flags.DEFINE_boolean('use_fixed_point_norm', False,
@@ -76,16 +79,21 @@ def do_eval(sess, model, x_data, y_data, save_pred=False):
   gp_prediction, stability_eps = model.predict(x_data, sess)
 
   pred_1 = np.argmax(gp_prediction, axis=1)
-  accuracy = np.sum(pred_1 == np.argmax(y_data, axis=1)) / float(len(y_data))
+  accuracy = 0
+  # accuracy = np.sum(pred_1 == np.argmax(y_data, axis=1)) / float(len(y_data))
+
+  # debug 
+  print("gp_prediction :", gp_prediction.shape)
+  print("y_data :", y_data.shape)
+
   mse = np.mean(np.mean((gp_prediction - y_data)**2, axis=1))
   pred_norm = np.mean(np.linalg.norm(gp_prediction, axis=1))
-  tf.logging.info('Accuracy: %.4f'%accuracy)
+
+  # tf.logging.info('Accuracy: %.4f'%accuracy)
   tf.logging.info('MSE: %.8f'%mse)
 
   if save_pred:
-    with tf.gfile.Open(
-        os.path.join(FLAGS.experiment_dir, 'gp_prediction_stats.npy'),
-        'w') as f:
+    with tf.gfile.Open(os.path.join(FLAGS.experiment_dir, 'gp_prediction_stats.npy'), 'w') as f:
       np.save(f, gp_prediction)
 
   return accuracy, mse, pred_norm, stability_eps
@@ -138,7 +146,8 @@ def run_nngp_eval(hparams, run_dir):
 
     # Construct Gaussian Process Regression model
     model = gpr.GaussianProcessRegression(
-        train_image, train_label, kern=nngp_kernel)
+        train_image, train_image, kern=nngp_kernel)
+        # train_image, train_label, kern=nngp_kernel)
 
     # 1.Training
     start_time = time.time()
@@ -146,23 +155,23 @@ def run_nngp_eval(hparams, run_dir):
     # For large number of training points, we do not evaluate on full set to
     # save on training evaluation time.
     if FLAGS.num_train <= 5000:
-      acc_train, mse_train, norm_train, final_eps = do_eval(sess, model, train_image[:FLAGS.num_eval], train_label[:FLAGS.num_eval])
+      acc_train, mse_train, norm_train, final_eps = do_eval(sess, model, train_image[:FLAGS.num_eval], train_image[:FLAGS.num_eval])
       tf.logging.info('Evaluation of training set (%d examples) took %.3f secs'%(min(FLAGS.num_train, FLAGS.num_eval), time.time() - start_time))
     else:
-      acc_train, mse_train, norm_train, final_eps = do_eval(sess, model, train_image[:1000], train_label[:1000])
+      acc_train, mse_train, norm_train, final_eps = do_eval(sess, model, train_image[:1000], train_image[:1000])
       tf.logging.info('Evaluation of training set (%d examples) took %.3f secs'%(1000, time.time() - start_time))
 
     # 2.Validation
     start_time = time.time()
     tf.logging.info('Validation')
-    acc_valid, mse_valid, norm_valid, _ = do_eval(sess, model, valid_image[:FLAGS.num_eval], valid_label[:FLAGS.num_eval])
+    acc_valid, mse_valid, norm_valid, _ = do_eval(sess, model, valid_image[:FLAGS.num_eval], valid_image[:FLAGS.num_eval])
 
     tf.logging.info('Evaluation of valid set (%d examples) took %.3f secs'%(FLAGS.num_eval, time.time() - start_time))
 
     # 3.Test
     start_time = time.time()
     tf.logging.info('Test')
-    acc_test, mse_test, norm_test, _ = do_eval(sess, model, test_image[:FLAGS.num_eval], test_label[:FLAGS.num_eval], save_pred=False)
+    acc_test, mse_test, norm_test, _ = do_eval(sess, model, test_image[:FLAGS.num_eval], test_image[:FLAGS.num_eval], save_pred=False)
 
     tf.logging.info('Evaluation of test set (%d examples) took %.3f secs'%(FLAGS.num_eval, time.time() - start_time))
 

@@ -1,0 +1,267 @@
+\documentclass[11pt,a4j]{article}
+
+% パッケージ
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{authblk}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\newtheorem{dfn}{定義}
+\newtheorem{thm}{定理}
+\newtheorem{lem}{補題}
+\newtheorem{exm}{例}
+ 
+% タイトル
+\title{Kernel VAE: カーネル法を用いた次元削減}
+\date{2019/10/11}
+\author[1]{内海 佑麻\thanks{uchiumi@ailab.ics.keio.ac.jp}}
+\affil[1]{慶應義塾大学理工学部情報工学科}
+
+\begin{document}
+  % タイトル
+  \maketitle
+  
+  % Abstract
+  \begin{abstract}
+    ...
+  \end{abstract}
+
+  % 目次
+  % \tableofcontents
+
+  \section{Introduction}
+    ...
+  \section{ガウス過程}
+    \subsection{ガウス過程の定義}
+      入力空間$\mathcal{X}$上の関数$f: \mathcal{X} \to \mathbb{R}$がガウス過程(Gaussian Process, GP)に従うとは，$\mathcal{X}$上の任意の$n$点${ \{ x_i \} }_{i=1}^{n}$に対して，
+      ベクトル${\bf f} \in \mathbb{R}^{n} = { ( f(x_1),\dots,f(x_n) ) }^{\mathrm{T}}$が多次元ガウス分布に従うことをいう．
+      ここで，確率変数${\bf f} \in \mathbb{R}^{n}$が$n$次元ガウス分布に従う時，その確率密度関数$p({\bf f})$は，平均関数${m}(\cdot)$と共分散関数$v(\cdot,\cdot)$を用いて
+      \begin{align}
+        p({\bf f}) = \frac{1}{ {(2 \pi)}^{n/2} {| V({\bf x}) |}^{1/2} } \exp \left( {- \frac{1}{2}} {({\bf f} - m(\bf f))}^{\mathrm{T}} {V({\bf f})}^{-1} ({\bf f} - m(\bf f)) \right)
+      \end{align}
+      と定められる．ただし，$V({\bf f})$は共分散$v({\bf f}_i, {\bf f}_j)$を$ij$要素にもつ共分散行列である．
+      ゆえに，関数$f: \mathcal{X} \to \mathbb{R}$がガウス過程(Gaussian Process, GP)に従うとき，その挙動は平均関数${m}(\cdot)$と共分散関数$v(\cdot,\cdot)$によって定められ，これを以下のように記述する．
+      \begin{align}
+        f(\cdot) \sim \mathcal{GP}(m(\cdot), v(\cdot,\cdot))
+      \end{align}
+
+    \subsection{条件つき分布の計算}
+      一般に，2つのベクトル${\bf f}_n \in \mathbb{R}^{n}, {\bf f}_m \in \mathbb{R}^{m}$に対して，
+      \begin{align}
+        \left(
+          \begin{array}{c}
+            {\bf f}_n \\ {\bf f}_m
+          \end{array}
+        \right)
+        \sim
+        \mathcal{N} 
+        \left(
+          \left(
+            \begin{array}{c}
+              {\boldsymbol \mu}_n \\ {\boldsymbol \mu}_m
+            \end{array}
+          \right)
+          ,
+          \begin{bmatrix}
+            \Sigma_{nn} & \Sigma_{nm} \\
+            \Sigma_{nm}^{\mathrm{T}} & \Sigma_{mm}
+          \end{bmatrix}
+        \right)
+      \end{align}
+      が成り立つとき，
+      \begin{align}
+        {\bf f}_m | {\bf f}_n \sim \mathcal{N}\left( {\boldsymbol \mu}_{m|n}, \Sigma_{m|n} \right) \label{form:gaussian_conditional}  
+      \end{align}
+      \begin{align}          
+        where ~ 
+        \begin{cases}
+          {\boldsymbol \mu}_{m|n} = {\boldsymbol \mu}_{m} + \Sigma_{nm}^{\mathrm{T}} \Sigma_{nn}^{-1} ( {\bf f}_n - {\boldsymbol \mu}_{n} ) \\
+          \Sigma_{m|n} = \Sigma_{mm} - \Sigma_{nm}^{\mathrm{T}} \Sigma_{nn}^{-1} \Sigma_{nm}
+        \end{cases} \nonumber
+      \end{align}
+
+    \subsection{ガウス過程回帰}
+      確率変数$X \in \mathbb{R}^{d}, Y \in \mathbb{R}$の実現値からなる$n$個のデータサンプル$\mathcal{D} = {\{ {\bf x}_i, y_i \}}_{i=1}^n$
+      を用いて，$X$の値から$Y$の値を推定するモデル$f:X \to Y$を特定することを回帰問題という．
+      すべての$({\bf x}, y)$に対して，モデルの出力値$f({\bf x})$と$y$との誤差を$\varepsilon$とおき，これが正規分布$\mathcal{N}(0, \sigma^2)$に従うと仮定すると回帰モデルは．
+      \begin{align}
+        y = f({\bf x}) + \varepsilon, ~~~ \varepsilon \sim \mathcal{N}(0, \sigma^2)
+      \end{align}
+      あるいは，正規分布の再生性より，
+      \begin{align}
+        y | {\bf x} \sim \mathcal{N}(f({\bf x}), \sigma^2) \label{form:reg_likelihood}
+      \end{align}
+      となる．
+      また一般の回帰問題において，データサンプル$\mathcal{D} = {\{ X_i, Y_i \}}_{i=1}^n$とモデル$f:X \to Y$に対して下式が成り立つことから，これはモデル$f$の分布に関するベイズ推論へ拡張できる．
+      \begin{align}
+        p(f|\mathcal{D}) = \frac{p(\mathcal{D}|f)p(f)}{p(\mathcal{D})}, ~~i.e.~~~
+        p(f | Y,X) = \frac{ p( Y | X, f) p(f) }{p( Y | X )} \label{form:reg_bayes}
+      \end{align}
+      上のモデルにおいて，関数$f$がガウス過程に従う場合，これをガウス過程回帰という．
+      たとえば，関数$f$に対して，
+      \begin{align}
+        f(\cdot) \sim \mathcal{GP}(m(\cdot), k(\cdot,\cdot)) \label{form:gp_prior}
+      \end{align}
+      を仮定すると，${\bf f}_n = { ( f({\bf x}_1),\dots,f({\bf x}_n) ) }^{\mathrm{T}}$と${\bf y}_n = {( y_1,\dots,y_n )}^{\mathrm{T}}$に対して，
+      \begin{align}
+        {\bf f}_n &\sim \mathcal{N}(m(X_n), K(X_n,X_n)) \\
+        {\bf y}_n &\sim \mathcal{N}(m(X_n), K(X_n,X_n) + \sigma^2 I_n)
+      \end{align}
+      が成り立つ．ただし，$ m(X_n) = { ( m({\bf x}_1), \dots, m({\bf x}_n) ) }^{\mathrm{T}} $，
+      $K(X_n,K(X_n))_{ij} = k(f({\bf x}_i), f({\bf x}_j))$，$I_n$は$n \times n$の単位行列とする．
+      式(\ref{form:gp_prior})は，式(\ref{form:reg_bayes})でモデル$f$の事前分布$p(f)$を定めることに対応する．
+      さらに，式(\ref{form:reg_likelihood})と正規分布の共役性より，ガウス過程回帰では，事前分布$p(f)$と事後分布$p(f|Y,X)$が共に正規分布に従うため，
+      データサンプル$\mathcal{D} = {\{ X_i, Y_i \}}_{i=1}^n$に基づく平均関数$m(\cdot)$と共分散関数$k(\cdot,\cdot)$の行列計算($O(n^2)$)のみで事後分布の形状が求められる．
+      
+      さらに，未知の$m$個のデータ${\{ {\bf x}_i \} }_{i=n+1}^{n+m}$に対して，対応する${\{ y_i \} }_{i=n+1}^{n+m}$の同時分布(予測分布)を求めることもできる．
+      式(\ref{form:gp_prior})より，
+      \begin{align}
+        \left(
+          \begin{array}{c}
+            {\bf f}_n \\ {\bf f}_m
+          \end{array}
+        \right)
+        \sim
+        \mathcal{N} 
+        \left(
+          \left(
+            \begin{array}{c}
+              m(X_n) \\ m(X_m)
+            \end{array}
+          \right)
+          ,
+          \begin{bmatrix}
+            K(X_n,X_n) & K(X_n,X_m) \\
+            {K(X_n,X_m)}^{\mathrm{T}} & K(X_m,X_m)
+          \end{bmatrix}
+        \right)
+      \end{align}
+      が成り立つから，式(\ref{form:gaussian_conditional})より，${\bf f}_m$の${\bf f}_n$に対する予測分布は，
+      \begin{align}
+        {\bf f}_m | {\bf f}_n \sim \mathcal{N}\left( E[{\bf f}_m | {\bf f}_n], V[{\bf f}_m | {\bf f}_n] \right) 
+      \end{align}
+      \begin{align}          
+        where ~ 
+        \begin{cases}
+          E[{\bf f}_m | {\bf f}_n] = m(X_m) + {K(X_n,X_m)}^{\mathrm{T}} {K(X_n,X_n)}^{-1} ( {\bf f}_n - m(X_n) ) \\
+          V[{\bf f}_m | {\bf f}_n] = K(X_m,X_m) - {K(X_n,X_m)}^{\mathrm{T}} {K(X_n,X_n)}^{-1} K(X_n,X_m)
+        \end{cases} \nonumber
+      \end{align}
+      となり，${\bf f}_m$の${\bf y}_n$に対する予測分布は，
+      \begin{align}
+        {\bf f}_m | {\bf y}_n \sim \mathcal{N}\left( E[{\bf f}_m | {\bf y}_n], V[{\bf f}_m | {\bf y}_n] \right) 
+      \end{align}
+      \begin{align}          
+        where ~ 
+        \begin{cases}
+          E[{\bf f}_m | {\bf y}_n] = m(X_m) + {K(X_n,X_m)}^{\mathrm{T}} {( K(X_n,X_n) + \sigma^2 I_n )} ^{-1} ( {\bf y}_n - m(X_n) ) \\
+          V[{\bf f}_m | {\bf y}_n] = K(X_m,X_m) - {K(X_n,X_m)}^{\mathrm{T}} { ( K(X_n,X_n) + \sigma^2 I_n ) }^{-1} K(X_n,X_m)
+        \end{cases} \nonumber
+      \end{align}
+      となる．よって，${\bf y}_m$の${\bf y}_n$に対する予測分布は，
+      \begin{align}
+        {\bf y}_m | {\bf y}_n \sim \mathcal{N}\left( E[{\bf y}_m | {\bf y}_n], V[{\bf y}_m | {\bf y}_n] \right) 
+      \end{align}
+      \begin{align}          
+        where ~ 
+        \begin{cases}
+          E[{\bf y}_m | {\bf y}_n] = m(X_m) + {K(X_n,X_m)}^{\mathrm{T}} {( K(X_n,X_n) + \sigma^2 I_n )} ^{-1} ( {\bf y}_n - m(X_n) ) \\
+          V[{\bf y}_m | {\bf y}_n] = K(X_m,X_m) - {K(X_n,X_m)}^{\mathrm{T}} { ( K(X_n,X_n) + \sigma^2 I_n ) }^{-1} K(X_n,X_m) + \sigma^2 I_m
+        \end{cases} \nonumber
+      \end{align}
+      となる．
+
+      
+  \section{Deep Neural Networkのカーネル法による近似}
+    \subsection{1層のNeural Network}
+      ニューラルネットワークの全結合層や畳み込み層における推論計算は，線形写像と非線形の活性化関数の組み合わせによって構成される．
+      ここで，ある層の入力ベクトルを${\bf x} \in \mathbb{R}^{N}$，
+      出力ベクトルを${\bf y} \in \mathbb{R}^{M}$，
+      線形写像に対応する変換行列を${\bf W} \in \mathbb{R}^{M \times N}$，
+      活性化関数を$\phi: \mathbb{R}^{M} \to \mathbb{R}^{M}$とすると，
+      非線形関数$f:{\bf x} \mapsto {\bf y}$は以下のように構成される．
+      \begin{align}
+        {\bf y} = f({\bf x}) = \phi( {\bf W x} )
+      \end{align}
+      なお，全結合層に置けるバイアスベクトルの追加に関しては，$\bf x$と$\bf W$に次元を1つ追加することで上式と等価となり，
+      畳み込み層に置けるフィルタ演算もim2colによって上式と等価となることに注意する．
+      ここで，関数$f$に対する内積$k(\cdot,\cdot) = {f(\cdot)}^{\mathrm{T}}f(\cdot): {\bf x} \times {\bf x}' \mapsto \mathbb{R}$を考える．
+      活性化関数$\phi$としてReLUを仮定して，対応する指示関数
+      \begin{align}
+        {\mathrm{I}}(x) = 
+        \begin{cases}
+          1 ~ (x \geq 0) \\
+          0 ~ (x < 0)
+        \end{cases}
+      \end{align}
+      を定義すると，$\forall {\bf x},{\bf x}'$に対する内積は，
+      \begin{align}
+        {f({\bf x})}^{\mathrm{T}} f({\bf x}') = \sum_{i=1}^{M} 
+        {\mathrm{I}}( {\bf w}_{i}^{\mathrm{T}} {\bf x} ) {\mathrm{I}}( {\bf w}_{i}^{\mathrm{T}} {\bf x}' ) 
+        ( {\bf w}_{i}^{\mathrm{T}} {\bf x} ) ( {\bf w}_{i}^{\mathrm{T}} {\bf x}' )
+      \end{align}
+      となる．ただし，${\bf w}_i = {( {\bf W}_{i1},\dots,{\bf W}_{iN} )}^{\mathrm{T}}$とする．
+      いま，行列$\bf W$の各要素${\bf W}_{ij}$をi.i.d.となる確率変数の実現値であると仮定すると，すべての$i$に対して，${\bf w}_{i}^{\mathrm{T}} {\bf x}$はi.i.d.サンプルの和に他ならないから，
+      中心極限定理(Central Limit Theorem)より，
+      \begin{align}
+        E\left[ \frac{1}{M} \sum_{i=1}^{M} {\bf w}_{i}^{\mathrm{T}} {\bf x} \right] \to
+        \int d{\bf w} \frac{\exp (\frac{- {|| {\bf w} ||}^2}{2})}{{(2 \pi)}^{N / 2}}  
+        ( {\bf w}^{\mathrm{T}} {\bf x} ) ~~~ (M \to \infty)
+      \end{align}
+      が満たされるから，
+      \begin{align}
+        &E\left[ \frac{1}{M} {f({\bf x})}^{\mathrm{T}} f({\bf x}') \right] \to \nonumber \\
+        &\int d{\bf w} \frac{\exp (\frac{- {|| {\bf w} ||}^2}{2})}{{(2 \pi)}^{N / 2}}
+        {\mathrm{I}}( {\bf w}^{\mathrm{T}} {\bf x} ) {\mathrm{I}}( {\bf w}^{\mathrm{T}} {\bf x}' ) 
+        ( {\bf w}^{\mathrm{T}} {\bf x} ) ( {\bf w}^{\mathrm{T}} {\bf x}' ) ~~~ (M \to \infty) \label{form:kernel_f} 
+      \end{align}
+      が成り立つ．式(\ref{form:kernel_f})右辺を整理すると，以下の定理が導かれる．
+
+      \begin{dfn}
+        任意の${\bf x}, {\bf x}' \in \mathcal{X} \subset \mathbb{R}^{N}$に対して，
+        \begin{align}
+          \theta &= {\cos}^{-1} \left( \frac{{\bf x}^{\mathrm{T}} {\bf x}'}{ \|{\bf x}\| \|{\bf x}'\| } \right) \\
+          J(\theta) &= 2 \sin \theta + 2 (\pi - \theta) \cos \theta
+        \end{align}
+        とする．
+      \end{dfn}
+
+      \begin{thm}
+        各要素$W_{ij}$が互いに独立に正規分布$\mathcal{N}(0, 1)$に従うランダム行列${\bf W} \in \mathbb{R}^{M \times N}$を考える．
+        活性化関数としてReLU関数$\phi$を用いて，1層のニューラルネットワークに相当する関数$f:\mathbb{R}^{N} \to \mathbb{R}^{M}$:
+        \begin{align}
+          f({\bf x}) = \phi({\bf Wx}) ~~ (\forall {\bf x} \in \mathbb{R}^{N})
+        \end{align}
+        を考える．このとき任意の${\bf x}, {\bf x}' \in \mathbb{R}^{N}$に対して，
+        \begin{align}
+          E \left[ \frac{1}{M} {f({\bf x})}^{\mathrm{T}} f({\bf x}') \right] \to \frac{1}{2 \pi} \| {\bf x} \| \| {\bf x}' \| J(\theta) ~~ (M \to \infty)
+        \end{align}
+        が成り立つ．
+      \end{thm}
+
+      \begin{thm}
+        $\mathcal{X} \times \mathcal{X}$上の関数
+        \begin{align}
+          k({\bf x},{\bf x}') = \frac{1}{2 \pi} \| {\bf x} \| \| {\bf x}' \| J(\theta)
+        \end{align}
+        は半正定値関数である．
+      \end{thm}
+
+      \begin{thm}
+        (正定値性と再生核の等価性)
+        $\mathcal{X} \times \mathcal{X}$上の任意の半正定値関数$k({\bf x},{\bf x}')$に対して，
+        $k$を再生核にもつHilbert空間がただ1つ定まる．
+      \end{thm}
+
+      すなわち，
+
+  \section{Kernel Variational AutoEncoder}
+  \section{Experiments}
+  \section{Conclusion}
+
+  % \bibliography{ref} %hoge.bibから拡張子を外した名前
+  % \bibliographystyle{junsrt} %参考文献出力スタイル
+
+
+\end{document}
+
