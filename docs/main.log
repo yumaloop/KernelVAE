@@ -1,138 +1,786 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2019.2.26)  15 OCT 2019 21:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.26)  21 OCT 2019 08:11
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
-pLaTeX2e <2018-04-01>+1 (based on LaTeX2e <2018-04-01> patch level 2)
+**/Users/uchiumi/Documents/kernelvae_jp/main.tex
+(/Users/uchiumi/Documents/kernelvae_jp/main.tex
+LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
-\c@part=\count83
-\c@section=\count84
-\c@subsection=\count85
-\c@subsubsection=\count86
-\c@paragraph=\count87
-\c@subparagraph=\count88
-\c@figure=\count89
-\c@table=\count90
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
-\bibindent=\dimen118
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+\bibindent=\dimen102
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks15
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+\KV@toks@=\toks14
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: dvipdfmx.def on input line 99.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
 File: dvipdfmx.def 2017/06/24 v5.0g Graphics/color driver for dvipdfmx
 ))
-\Gin@req@height=\dimen119
-\Gin@req@width=\dimen120
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/preprint/authblk.sty
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/preprint/authblk.sty
 Package: authblk 2001/02/27 1.3 (PWD)
 \affilsep=\skip43
 \@affilsep=\skip44
-\c@Maxaffil=\count91
-\c@authors=\count92
-\c@affil=\count93
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
+\c@Maxaffil=\count88
+\c@authors=\count89
+\c@affil=\count90
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks16
-\ex@=\dimen121
-))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
+\@emptytoks=\toks15
+\ex@=\dimen105
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen122
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
+\pmbraise@=\dimen106
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count94
+\inf@bad=\count91
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count95
-\leftroot@=\count96
+\uproot@=\count92
+\leftroot@=\count93
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count97
-\DOTSCASE@=\count98
+\classnum@=\count94
+\DOTSCASE@=\count95
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box42
-\strutbox@=\box43
-\big@size=\dimen123
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count99
-\c@MaxMatrixCols=\count100
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
 \dotsspace@=\muskip10
-\c@parentequation=\count101
-\dspbrk@lvl=\count102
-\tag@help=\toks17
-\row@=\count103
-\column@=\count104
-\maxfields@=\count105
-\andhelp@=\toks18
-\eqnshift@=\dimen124
-\alignsep@=\dimen125
-\tagshift@=\dimen126
-\tagwidth@=\dimen127
-\totwidth@=\dimen128
-\lineht@=\dimen129
-\@envbody=\toks19
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks16
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks17
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks18
 \multlinegap=\skip46
 \multlinetaggap=\skip47
-\mathdisplay@stack=\toks20
+\mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-\c@dfn=\count106
-\c@thm=\count107
-\c@lem=\count108
-\c@exm=\count109
+\c@dfn=\count103
+\c@thm=\count104
+\c@lem=\count105
+\c@exm=\count106
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Argument of \DeclareUnicodeCharacter has an extra }.
+<inserted text> 
+                \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:18: Paragraph ended before \DeclareUnicodeCharacter was complete.
+<to be read again> 
+                   \par 
+l.18 ...��義塾大学理工学部情報工学科}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
 
 
 LaTeX Warning: Unused global option(s):
     [a4j].
 
-(./main.aux)
+(/Users/uchiumi/Documents/kernelvae_jp/main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
@@ -147,90 +795,1926 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character カ (U+30AB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character ー (U+30FC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character ネ (U+30CD)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character ル (U+30EB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 法 (U+6CD5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character を (U+3092)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 用 (U+7528)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character い (U+3044)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character た (U+305F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 次 (U+6B21)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 元 (U+5143)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 削 (U+524A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 減 (U+6E1B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 内 (U+5185)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+\GenericError {               }{LaTeX Error: Can be used only in preamble}{See the LaTeX manual or LaTeX Companion for explanation.}{Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.}
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 海 (U+6D77)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+\GenericError {               }{LaTeX Error: Can be used only in preamble}{See the LaTeX manual or LaTeX Companion for explanation.}{Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.}
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 佑 (U+4F51)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+\GenericError {               }{LaTeX Error: Can be used only in preamble}{See the LaTeX manual or LaTeX Companion for explanation.}{Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.}
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 麻 (U+9EBB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+\GenericError {               }{LaTeX Error: Can be used only in preamble}{See the LaTeX manual or LaTeX Companion for explanation.}{Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.}
+
 LaTeX Font Info:    Try loading font information for U+msa on input line 22.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 22.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 22.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 慶 (U+6176)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+{\@@par }
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 應 (U+61C9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+{\@@par }
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 義 (U+7FA9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+{\@@par }
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 塾 (U+587E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+{\@@par }
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 大 (U+5927)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+{\@@par }
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 学 (U+5B66)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+{\@@par }
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 理 (U+7406)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+{\@@par }
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 工 (U+5DE5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+{\@@par }
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 学 (U+5B66)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+{\@@par }
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 部 (U+90E8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+{\@@par }
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 情 (U+60C5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+{\@@par }
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 報 (U+5831)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+{\@@par }
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 工 (U+5DE5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+{\@@par }
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 学 (U+5B66)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+{\@@par }
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:22: Package inputenc Error: Unicode character 科 (U+79D1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22   \maketitle
+                 
+You may provide a definition with
+{\@@par }
+
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 25.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 25.
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 32.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 32.
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 35.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 35.
-
-Overfull \hbox (16.52834pt too wide) in paragraph at lines 36--39
-\JY1/mc/m/n/10.95 とは ， $\OMS/cmsy/m/n/10.95 X$ \JY1/mc/m/n/10.95 上の任意の 
-$\OML/cmm/m/it/10.95 n$ \JY1/mc/m/n/10.95 点 $[][]$ に対して ， ベクトル $[] \O
-MS/cmsy/m/n/10.95 2 \U/msb/m/n/10.95 R[] \OT1/cmr/m/n/10.95 = [][]$
- []
-
-[1
-
-] [2]
-Overfull \hbox (2.77538pt too wide) detected at line 149
-[]
- []
+No file main.toc.
+\tf@toc=\write3
+\openout3 = `main.toc'.
 
 
-Overfull \hbox (49.34447pt too wide) detected at line 160
-[]
- []
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:34: Package inputenc Error: Unicode character ガ (U+30AC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34   \section{ガウス過程}
+                                
+You may provide a definition with
+\DeclareUnicodeCharacter 
 
 
-Overfull \hbox (89.75801pt too wide) detected at line 171
-[]
- []
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:34: Package inputenc Error: Unicode character ウ (U+30A6)
+(inputenc)                not set up for use with LaTeX.
 
-[3]
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 221.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 221.
-
-
-LaTeX Font Warning: Font shape `JT1/mc/m/it' undefined
-(Font)              using `JT1/mc/m/n' instead on input line 221.
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34   \section{ガウス過程}
+                                
+You may provide a definition with
+\DeclareUnicodeCharacter 
 
 
-LaTeX Font Warning: Font shape `JY1/mc/m/it' undefined
-(Font)              using `JY1/mc/m/n' instead on input line 221.
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:34: Package inputenc Error: Unicode character ス (U+30B9)
+(inputenc)                not set up for use with LaTeX.
 
-[4] [5] (./main.aux)
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34   \section{ガウス過程}
+                                
+You may provide a definition with
+\DeclareUnicodeCharacter 
 
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
- ) 
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:34: Package inputenc Error: Unicode character 過 (U+904E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34   \section{ガウス過程}
+                                
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:34: Package inputenc Error: Unicode character 程 (U+7A0B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34   \section{ガウス過程}
+                                
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:35: Package inputenc Error: Unicode character ガ (U+30AC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35     \subsection{ガウス過程の定義}
+                                              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:35: Package inputenc Error: Unicode character ウ (U+30A6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35     \subsection{ガウス過程の定義}
+                                              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:35: Package inputenc Error: Unicode character ス (U+30B9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35     \subsection{ガウス過程の定義}
+                                              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:35: Package inputenc Error: Unicode character 過 (U+904E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35     \subsection{ガウス過程の定義}
+                                              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:35: Package inputenc Error: Unicode character 程 (U+7A0B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35     \subsection{ガウス過程の定義}
+                                              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:35: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35     \subsection{ガウス過程の定義}
+                                              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:35: Package inputenc Error: Unicode character 定 (U+5B9A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35     \subsection{ガウス過程の定義}
+                                              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:35: Package inputenc Error: Unicode character 義 (U+7FA9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35     \subsection{ガウス過程の定義}
+                                              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character 入 (U+5165)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36       入
+              力空間$\mathcal{X}$上の関数$f: \mathcal{X} \to \mathbb{...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character 力 (U+529B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36       入力
+                 空間$\mathcal{X}$上の関数$f: \mathcal{X} \to \mathbb{...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character 空 (U+7A7A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36       入力空
+                    間$\mathcal{X}$上の関数$f: \mathcal{X} \to \mathbb{...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character 間 (U+9593)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36       入力空間
+                       $\mathcal{X}$上の関数$f: \mathcal{X} \to \mathbb{...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character 上 (U+4E0A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36       入力空間$\mathcal{X}$上
+                                       の関数$f: \mathcal{X} \to \mathbb{...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36       入力空間$\mathcal{X}$上の
+                                          関数$f: \mathcal{X} \to \mathbb{...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character 関 (U+95A2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36       入力空間$\mathcal{X}$上の関
+                                             数$f: \mathcal{X} \to \mathbb{...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character 数 (U+6570)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36       入力空間$\mathcal{X}$上の関数
+                                                $f: \mathcal{X} \to \mathbb{...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character が (U+304C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...��関数$f: \mathcal{X} \to \mathbb{R}$が
+                                                  ガウス過程(Gaussian P...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character ガ (U+30AC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...��数$f: \mathcal{X} \to \mathbb{R}$がガ
+                                                  ウス過程(Gaussian Proc...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character ウ (U+30A6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...��$f: \mathcal{X} \to \mathbb{R}$がガウ
+                                                  ス過程(Gaussian Process...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character ス (U+30B9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...f: \mathcal{X} \to \mathbb{R}$がガウス
+                                                  過程(Gaussian Process, G...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character 過 (U+904E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...\mathcal{X} \to \mathbb{R}$がガウス過
+                                                  程(Gaussian Process, GP)�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character 程 (U+7A0B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...thcal{X} \to \mathbb{R}$がガウス過程
+                                                  (Gaussian Process, GP)に�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character に (U+306B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...��ガウス過程(Gaussian Process, GP)に
+                                                  従うとは，$\mathcal{X...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character 従 (U+5F93)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...��ウス過程(Gaussian Process, GP)に従
+                                                  うとは，$\mathcal{X}$�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character う (U+3046)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...��ス過程(Gaussian Process, GP)に従う
+                                                  とは，$\mathcal{X}$上�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character と (U+3068)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...��過程(Gaussian Process, GP)に従うと
+                                                  は，$\mathcal{X}$上の�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character は (U+306F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...��程(Gaussian Process, GP)に従うとは
+                                                  ，$\mathcal{X}$上の任�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character ， (U+FF0C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...��(Gaussian Process, GP)に従うとは，
+                                                  $\mathcal{X}$上の任意�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character 上 (U+4E0A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...ess, GP)に従うとは，$\mathcal{X}$上
+                                                  の任意の$n$点${ \{ x_...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ..., GP)に従うとは，$\mathcal{X}$上の
+                                                  任意の$n$点${ \{ x_i \...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character 任 (U+4EFB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...P)に従うとは，$\mathcal{X}$上の任
+                                                  意の$n$点${ \{ x_i \} }...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character 意 (U+610F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...��従うとは，$\mathcal{X}$上の任意
+                                                  の$n$点${ \{ x_i \} }_{i...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...��うとは，$\mathcal{X}$上の任意の
+                                                  $n$点${ \{ x_i \} }_{i=1}...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character 点 (U+70B9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...��は，$\mathcal{X}$上の任意の$n$点
+                                                  ${ \{ x_i \} }_{i=1}^{n}$�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character に (U+306B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...��意の$n$点${ \{ x_i \} }_{i=1}^{n}$に
+                                                  対して，
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character 対 (U+5BFE)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...��の$n$点${ \{ x_i \} }_{i=1}^{n}$に対
+                                                  して，
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character し (U+3057)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...��$n$点${ \{ x_i \} }_{i=1}^{n}$に対し
+                                                  て，
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character て (U+3066)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...n$点${ \{ x_i \} }_{i=1}^{n}$に対して
+                                                  ，
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:36: Package inputenc Error: Unicode character ， (U+FF0C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...��${ \{ x_i \} }_{i=1}^{n}$に対して，
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character ベ (U+30D9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37       ベ
+              クトル${\bf f} = { ( f(x_1),\dots,f(x_n) ) }^{\mathrm{T}} \...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character ク (U+30AF)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37       ベク
+                 トル${\bf f} = { ( f(x_1),\dots,f(x_n) ) }^{\mathrm{T}} \...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character ト (U+30C8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37       ベクト
+                    ル${\bf f} = { ( f(x_1),\dots,f(x_n) ) }^{\mathrm{T}} \...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character ル (U+30EB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37       ベクトル
+                       ${\bf f} = { ( f(x_1),\dots,f(x_n) ) }^{\mathrm{T}} \...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character が (U+304C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 ...n) ) }^{\mathrm{T}} \in \mathbb{R}^{n}$が
+                                                  $n$次元ガウス分布�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character 次 (U+6B21)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 ...^{\mathrm{T}} \in \mathbb{R}^{n}$が$n$次
+                                                  元ガウス分布に従�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character 元 (U+5143)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 ...mathrm{T}} \in \mathbb{R}^{n}$が$n$次元
+                                                  ガウス分布に従う�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character ガ (U+30AC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 ...hrm{T}} \in \mathbb{R}^{n}$が$n$次元ガ
+                                                  ウス分布に従うこ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character ウ (U+30A6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 ...{T}} \in \mathbb{R}^{n}$が$n$次元ガウ
+                                                  ス分布に従うこと�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character ス (U+30B9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 ...} \in \mathbb{R}^{n}$が$n$次元ガウス
+                                                  分布に従うことを�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character 分 (U+5206)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 ...in \mathbb{R}^{n}$が$n$次元ガウス分
+                                                  布に従うことをい�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character 布 (U+5E03)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 ...\mathbb{R}^{n}$が$n$次元ガウス分布
+                                                  に従うことをいう．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character に (U+306B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 ...thbb{R}^{n}$が$n$次元ガウス分布に
+                                                  従うことをいう．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character 従 (U+5F93)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 ...b{R}^{n}$が$n$次元ガウス分布に従
+                                                  うことをいう．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character う (U+3046)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 ...}^{n}$が$n$次元ガウス分布に従う
+                                                  ことをいう．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character こ (U+3053)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 ...n}$が$n$次元ガウス分布に従うこ
+                                                  とをいう．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character と (U+3068)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 ...が$n$次元ガウス分布に従うこと
+                                                  をいう．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character を (U+3092)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 ...$n$次元ガウス分布に従うことを
+                                                  いう．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character い (U+3044)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 ...次元ガウス分布に従うことをい
+                                                  う．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character う (U+3046)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 ...元ガウス分布に従うことをいう
+                                                  ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:37: Package inputenc Error: Unicode character ． (U+FF0E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 ...ガウス分布に従うことをいう．
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character こ (U+3053)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38       こ
+              こで，確率変数${\bf f} \in \mathbb{R}^{n}$が$n$次元�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character こ (U+3053)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38       ここ
+                 で，確率変数${\bf f} \in \mathbb{R}^{n}$が$n$次元�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character で (U+3067)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38       ここで
+                    ，確率変数${\bf f} \in \mathbb{R}^{n}$が$n$次元�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character ， (U+FF0C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38       ここで，
+                       確率変数${\bf f} \in \mathbb{R}^{n}$が$n$次元�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 確 (U+78BA)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38       ここで，確
+                          率変数${\bf f} \in \mathbb{R}^{n}$が$n$次元�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 率 (U+7387)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38       ここで，確率
+                             変数${\bf f} \in \mathbb{R}^{n}$が$n$次元�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 変 (U+5909)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38       ここで，確率変
+                                数${\bf f} \in \mathbb{R}^{n}$が$n$次元�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 数 (U+6570)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38       ここで，確率変数
+                                   ${\bf f} \in \mathbb{R}^{n}$が$n$次元�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character が (U+304C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...��率変数${\bf f} \in \mathbb{R}^{n}$が
+                                                  $n$次元ガウス分布�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 次 (U+6B21)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...��数${\bf f} \in \mathbb{R}^{n}$が$n$次
+                                                  元ガウス分布に従�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 元 (U+5143)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...��${\bf f} \in \mathbb{R}^{n}$が$n$次元
+                                                  ガウス分布に従う�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character ガ (U+30AC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...{\bf f} \in \mathbb{R}^{n}$が$n$次元ガ
+                                                  ウス分布に従う時�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character ウ (U+30A6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...f f} \in \mathbb{R}^{n}$が$n$次元ガウ
+                                                  ス分布に従う時，�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character ス (U+30B9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...} \in \mathbb{R}^{n}$が$n$次元ガウス
+                                                  分布に従う時，そ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 分 (U+5206)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...in \mathbb{R}^{n}$が$n$次元ガウス分
+                                                  布に従う時，その�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 布 (U+5E03)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...\mathbb{R}^{n}$が$n$次元ガウス分布
+                                                  に従う時，その確�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character に (U+306B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...thbb{R}^{n}$が$n$次元ガウス分布に
+                                                  従う時，その確率�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 従 (U+5F93)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...b{R}^{n}$が$n$次元ガウス分布に従
+                                                  う時，その確率密�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character う (U+3046)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...}^{n}$が$n$次元ガウス分布に従う
+                                                  時，その確率密度�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 時 (U+6642)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...n}$が$n$次元ガウス分布に従う時
+                                                  ，その確率密度関�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character ， (U+FF0C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...が$n$次元ガウス分布に従う時，
+                                                  その確率密度関数$p...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character そ (U+305D)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...$n$次元ガウス分布に従う時，そ
+                                                  の確率密度関数$p({\...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...次元ガウス分布に従う時，その
+                                                  確率密度関数$p({\bf ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 確 (U+78BA)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...元ガウス分布に従う時，その確
+                                                  率密度関数$p({\bf f})...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 率 (U+7387)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...ガウス分布に従う時，その確率
+                                                  密度関数$p({\bf f})$�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 密 (U+5BC6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...ウス分布に従う時，その確率密
+                                                  度関数$p({\bf f})$は�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 度 (U+5EA6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...ス分布に従う時，その確率密度
+                                                  関数$p({\bf f})$は，�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 関 (U+95A2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...分布に従う時，その確率密度関
+                                                  数$p({\bf f})$は，平�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 数 (U+6570)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...布に従う時，その確率密度関数
+                                                  $p({\bf f})$は，平均�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character は (U+306F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...，その確率密度関数$p({\bf f})$は
+                                                  ，平均関数${m}(\cdot)...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character ， (U+FF0C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...その確率密度関数$p({\bf f})$は，
+                                                  平均関数${m}(\cdot)$�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 平 (U+5E73)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...の確率密度関数$p({\bf f})$は，平
+                                                  均関数${m}(\cdot)$と�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 均 (U+5747)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...確率密度関数$p({\bf f})$は，平均
+                                                  関数${m}(\cdot)$と共�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 関 (U+95A2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...率密度関数$p({\bf f})$は，平均関
+                                                  数${m}(\cdot)$と共分�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 数 (U+6570)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...密度関数$p({\bf f})$は，平均関数
+                                                  ${m}(\cdot)$と共分散�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character と (U+3068)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...{\bf f})$は，平均関数${m}(\cdot)$と
+                                                  共分散関数$v(\cdot,\c...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 共 (U+5171)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...f f})$は，平均関数${m}(\cdot)$と共
+                                                  分散関数$v(\cdot,\cdot...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 分 (U+5206)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...})$は，平均関数${m}(\cdot)$と共分
+                                                  散関数$v(\cdot,\cdot)$�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 散 (U+6563)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...は，平均関数${m}(\cdot)$と共分散
+                                                  関数$v(\cdot,\cdot)$を�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 関 (U+95A2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...，平均関数${m}(\cdot)$と共分散関
+                                                  数$v(\cdot,\cdot)$を用�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 数 (U+6570)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...平均関数${m}(\cdot)$と共分散関数
+                                                  $v(\cdot,\cdot)$を用いて
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character を (U+3092)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...dot)$と共分散関数$v(\cdot,\cdot)$を
+                                                  用いて
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character 用 (U+7528)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...)$と共分散関数$v(\cdot,\cdot)$を用
+                                                  いて
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character い (U+3044)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...��共分散関数$v(\cdot,\cdot)$を用い
+                                                  て
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:38: Package inputenc Error: Unicode character て (U+3066)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...��分散関数$v(\cdot,\cdot)$を用いて
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:42: Package inputenc Error: Unicode character と (U+3068)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42       と
+              定められる．ただし，$V({\bf f})$は共分散$v({\bf ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:42: Package inputenc Error: Unicode character 定 (U+5B9A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42       と定
+                 められる．ただし，$V({\bf f})$は共分散$v({\bf ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:42: Package inputenc Error: Unicode character め (U+3081)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42       と定め
+                    られる．ただし，$V({\bf f})$は共分散$v({\bf ...
+(That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 1684 strings out of 493281
- 19753 string characters out of 6145041
- 92187 words of memory out of 5000000
- 5607 multiletter control sequences out of 15000+600000
- 24233 words of font info for 95 fonts, out of 8000000 for 9000
- 929 hyphenation exceptions out of 8191
- 30i,20n,27p,220b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 1711 strings out of 492649
+ 20019 string characters out of 6129622
+ 91193 words of memory out of 5000000
+ 5599 multiletter control sequences out of 15000+600000
+ 14471 words of font info for 55 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 30i,10n,27p,274b,313s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (5 pages, 18852 bytes).
+/Users/uchiumi/Documents/kernelvae_jp/main.tex:42:  ==> Fatal error occurred, no output PDF file produced!
