@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {2}ガウス過程と確率モデル}{2}
+\contentsline {subsection}{\numberline {2.1}ガウス分布}{2}
+\contentsline {paragraph}{分布の再生性}{2}
+\contentsline {paragraph}{条件つき分布の計算}{2}
+\contentsline {subsection}{\numberline {2.2}ガウス過程(GP)}{2}
+\contentsline {subsection}{\numberline {2.3}ガウス過程回帰(GPR)}{2}
+\contentsline {subsection}{\numberline {2.4}ガウス過程潜在変数モデル(GP-LVM)}{4}
+\contentsline {paragraph}{最尤推定}{5}
+\contentsline {paragraph}{MAP推定}{5}
+\contentsline {section}{\numberline {3}Deep Neural Networkのカーネル法による近似}{6}
+\contentsline {subsection}{\numberline {3.1}1層のFeed Forward Neural Network}{6}
+\contentsline {subsection}{\numberline {3.2}多層のFeed Forward Neural Network}{8}
+\contentsline {section}{\numberline {4}Kernel Variational AutoEncoder}{8}
+\contentsline {section}{\numberline {5}Experiments}{9}
+\contentsline {section}{\numberline {6}Conclusion}{9}

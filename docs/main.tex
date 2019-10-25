@@ -1,4 +1,4 @@
-\documentclass[11pt,a4j]{article}
+\documentclass[11pt,a4j]{jarticle}
 
 % パッケージ
 \usepackage[dvipdfmx]{graphicx}
@@ -31,22 +31,18 @@
 
   \section{Introduction}
     ...
-  \section{ガウス過程}
-    \subsection{ガウス過程の定義}
-      入力空間$\mathcal{X}$上の関数$f: \mathcal{X} \to \mathbb{R}$がガウス過程(Gaussian Process, GP)に従うとは，$\mathcal{X}$上の任意の$n$点${ \{ x_i \} }_{i=1}^{n}$に対して，
-      ベクトル${\bf f} = { ( f(x_1),\dots,f(x_n) ) }^{\mathrm{T}} \in \mathbb{R}^{n}$が$n$次元ガウス分布に従うことをいう．
-      ここで，確率変数${\bf f} \in \mathbb{R}^{n}$が$n$次元ガウス分布に従う時，その確率密度関数$p({\bf f})$は，平均関数${m}(\cdot)$と共分散関数$v(\cdot,\cdot)$を用いて
+  \section{ガウス過程と確率モデル}
+
+    \subsection{ガウス分布}
+    \paragraph{分布の再生性}
+      任意の$n \in \mathbb{N}$と${\{ a_i, b_i \in \mathbb{R} \}}_{i=1}^{n}$に対して，次が成り立つ．
       \begin{align}
-        p({\bf f}) = \frac{1}{ {(2 \pi)}^{n/2} {| V({\bf x}) |}^{1/2} } \exp \left( {- \frac{1}{2}} {({\bf f} - m(\bf f))}^{\mathrm{T}} {V({\bf f})}^{-1} ({\bf f} - m(\bf f)) \right)
-      \end{align}
-      と定められる．ただし，$V({\bf f})$は共分散$v({\bf f}_i, {\bf f}_j)$を$ij$要素にもつ共分散行列である．
-      ゆえに，関数$f: \mathcal{X} \to \mathbb{R}$がガウス過程(Gaussian Process, GP)に従うとき，その挙動は平均関数${m}(\cdot)$と共分散関数$v(\cdot,\cdot)$によって定められ，これを以下のように記述する．
-      \begin{align}
-        f(\cdot) \sim \mathcal{GP}(m(\cdot), v(\cdot,\cdot))
+        &X_i \sim i.i.d. ~ \mathcal{N}(\mu_i, \sigma_i^2), ~~~ (i=1,\dots,n) \\
+        &\Rightarrow \sum_{i=1}^{n} a_i X_i + b_i \sim \mathcal{N} \left( \sum_{i=1}^{n} a_i \mu_i + b_i, \sum_{i=1}^{n} a_i^2 \sigma_i^2 \right)
       \end{align}
 
-    \subsection{条件つき分布の計算}
-      一般に，2つのベクトル${\bf f}_n \in \mathbb{R}^{n}, {\bf f}_m \in \mathbb{R}^{m}$に対して，
+    \paragraph{条件つき分布の計算}
+      任意の2つのベクトル${\bf f}_n \in \mathbb{R}^{n}, {\bf f}_m \in \mathbb{R}^{m}$に対して，
       \begin{align}
         \left(
           \begin{array}{c}
@@ -68,7 +64,7 @@
           \end{bmatrix}
         \right)
       \end{align}
-      が成り立つとき，
+      ならば，次が成り立つ．
       \begin{align}
         {\bf f}_m | {\bf f}_n \sim \mathcal{N}\left( {\boldsymbol \mu}_{m|n}, \Sigma_{m|n} \right) \label{form:gaussian_conditional}  
       \end{align}
@@ -80,7 +76,20 @@
         \end{cases} \nonumber
       \end{align}
 
-    \subsection{ガウス過程回帰}
+    \subsection{ガウス過程(GP)}
+      入力空間$\mathcal{X}$上の関数$f: \mathcal{X} \to \mathbb{R}$がガウス過程(Gaussian Process, GP)に従うとは，$\mathcal{X}$上の任意の$n$点${ \{ x_i \} }_{i=1}^{n}$に対して，
+      ベクトル${\bf f} = { ( f(x_1),\dots,f(x_n) ) }^{\mathrm{T}} \in \mathbb{R}^{n}$が$n$次元ガウス分布に従うことをいう．
+      ここで，確率変数${\bf f} \in \mathbb{R}^{n}$が$n$次元ガウス分布に従う時，その確率密度関数$p({\bf f})$は，平均関数${m}(\cdot)$と共分散関数$v(\cdot,\cdot)$を用いて
+      \begin{align}
+        p({\bf f}) = \frac{1}{ {(2 \pi)}^{n/2} {| V({\bf f}) |}^{1/2} } \exp \left( {- \frac{1}{2}} {({\bf f} - m(\bf f))}^{\mathrm{T}} {V({\bf f})}^{-1} ({\bf f} - m(\bf f)) \right)
+      \end{align}
+      と定められる．ただし，$V({\bf f})$は共分散$v({\bf f}_i, {\bf f}_j)$を$ij$要素にもつ共分散行列である．
+      ゆえに，関数$f: \mathcal{X} \to \mathbb{R}$がガウス過程(Gaussian Process, GP)に従うとき，その挙動は平均関数${m}(\cdot)$と共分散関数$v(\cdot,\cdot)$によって定められ，これを以下のように記述する．
+      \begin{align}
+        f(\cdot) \sim \mathcal{GP}(m(\cdot), v(\cdot,\cdot))
+      \end{align}    
+
+    \subsection{ガウス過程回帰(GPR)}
       確率変数$X \in \mathbb{R}^{d}, Y \in \mathbb{R}$の実現値からなる$n$個のデータサンプル$\mathcal{D} = {\{ {\bf x}_i, y_i \}}_{i=1}^n$
       を用いて，$X$の値から$Y$の値を推定するモデル$f:X \to Y$を特定することを回帰問題という．
       すべての$({\bf x}, y)$に対して，モデルの出力値$f({\bf x})$と$y$との誤差を$\varepsilon$とおき，これが正規分布$\mathcal{N}(0, \sigma^2)$に従うと仮定すると回帰モデルは．
@@ -170,8 +179,72 @@
         \end{cases} \nonumber
       \end{align}
       となる．
+    
+      \subsection{ガウス過程潜在変数モデル(GP-LVM)}
+        確率変数$X \in \mathbb{R}^{Q}, Y \in \mathbb{R}^{D}$に対して，$Y$のN個のデータサンプル${ \{ {\bf y}_i \} }_{i=1}^{n}$から，生成モデル$p(Y|X)$を特定することを考える．
+        このとき，$Y$を観測変数，$X$を潜在変数と呼ぶ．
+        観測変数の観測値(計画行列)を${\bf Y}^n = \mathbb{R}^{n \times D}$，それを表現する潜在変数の観測値(計画行列)を${\bf X}^n \in \mathbb{R}^{n \times Q}$とおく．
+        すべての$i \in \{1,\dots,N\}$と$d \in \{1,\dots,D\}$に対して，関数$f: \mathbb{R}^Q \to \mathbb{R}$を用いて，生成過程：
+        \begin{align}
+          {{\bf y}_i}_d = f({\bf x}_i) + \varepsilon_i, ~~~
+          \varepsilon_i \sim i.i.d. ~ \mathcal{N}(0, \sigma_{\varepsilon}^2)
+        \end{align}
+        を仮定し，さらに関数$f$に対してガウス過程
+        \begin{align}
+          f(\cdot) \sim \mathcal{GP}(0, k(\cdot,\cdot))
+        \end{align}
+        を仮定すると，
+        \begin{align}
+          p({\bf y}_i | {\bf X}^n) &= \prod_{d=1}^{D} p({{\bf y}_i}_d) = \prod_{d=1}^{D} \mathcal{N}({{\bf y}_i}_d | f({\bf x}_i), \sigma_\varepsilon^2 ) \\
+          p({\bf y}_d | {\bf X}^n) &= \prod_{i=1}^{n} p({{\bf y}_i}_d) = \mathcal{N}({\bf y}_d | {\bf 0}, {\bf \Sigma}_{nn})
+        \end{align}
+        となるから，生成モデルの尤度は，次式で与えられる．
+        \begin{align}
+          p({\bf Y}^n|{\bf X}^n) &= \prod_{d=1}^{D} p({\bf y}_d | {\bf X}^n) = \prod_{d=1}^{D} \mathcal{N}({\bf y}_d | {\bf 0}, {\bf \Sigma}_{nn}) \\
+          &= \prod_{d=1}^{D} \frac{1}{{(2 \pi)}^{\frac{n}{2}} {|{\bf \Sigma}_{nn}|}^{\frac{1}{2}}} \exp \left( - \frac{1}{2} {\bf y}_d^{\mathrm{T}} {\bf \Sigma}_{nn}^{-1} {\bf y}_d \right) \\
+          &= \frac{1}{{(2 \pi)}^{\frac{Dn}{2}} {|{\bf \Sigma}_{nn}|}^{\frac{D}{2}}} \exp \left( - \frac{1}{2} {\rm tr}({\bf \Sigma}_{nn}^{-1} {{\bf Y}^n}{{\bf Y}^n}^{\mathrm{T}}) \right)
+        \end{align}
+        ただし，
+        \begin{align}
+          {\bf \Sigma}_{nn} &= {\bf K}_{nn} + \sigma_{\varepsilon}^2 {\bf I}_n \\
+          {\bf K}_{nn}(i,j) &= k({\bf x}_i, {\bf x}_j), ~~~ \forall (i,j)
+        \end{align}
+        とする．
+        \paragraph{最尤推定}
+          ${\bf Y}^n$が与えられたときの${\bf X}^n$の対数尤度は，
+          \begin{align}
+            \log p({\bf Y}^n|{\bf X}^n)
+            &= -\frac{Dn}{2} \log (2 \pi) - \frac{D}{2} \log |{\bf \Sigma}_{nn}| - \frac{1}{2} {\rm tr} ({\bf \Sigma}_{nn}^{-1} {{\bf Y}^n}{{\bf Y}^n}^{\mathrm{T}})
+          \end{align}
+          となるから，これを目的関数として最大化すれば，${\bf X}^n$の最尤推定量は，次のように求められる．
+          \begin{align}
+            \hat{\bf X}^{n}_{ML} &= \underset{{\bf X}^n}{\rm argmax} ~ \log p( {\bf Y}^n | {\bf X}^n) \\
+          \end{align}
 
-      
+        \paragraph{MAP推定}
+          $X^n$の事前分布として，
+          \begin{align}
+            p(X^n) 
+            &= \prod_{q=1}^{Q} p({\bf x}_q) = \prod_{q=1}^{Q} \mathcal{N}({\bf x}_q | {\bf 0}, \sigma_x^2 I_N) \\
+            &= \prod_{q=1}^{Q} \frac{1}{{(2 \pi {\sigma_x^2} )}^{\frac{n}{2}}} \exp \left( - \frac{ {\bf x}_q^{\mathrm{T}} {\bf x}_q }{2 \sigma_x^2} \right) \\
+            &= \frac{1}{{(2 \pi {\sigma_x^2} )}^{\frac{QN}{2}}} \exp \left( -\frac{1}{2 \sigma_x^2} {\rm tr} ({{\bf X}^n}{{\bf X}^n}^{\mathrm{T}}) \right) \\
+          \end{align}
+          を仮定すると，ベイズの定理より，$X$の事後分布は，
+          \begin{align}
+            p(X|Y) = \frac{1}{Z} p(Y|X)p(X)
+          \end{align}
+          となる．ただし，$Z$は規格化定数とする，よって，${\bf X}^n$の事後確率は，
+          \begin{align}
+            p({\bf X}^n|{\bf Y}^n) 
+            &\propto \log p({\bf Y}^n | {\bf X}^n) p({\bf X}^n) \\
+            &= -\frac{Dn}{2} \log (2 \pi) - \frac{D}{2} \log |{\bf \Sigma}_{nn}| - \frac{1}{2} {\rm tr} ({\bf \Sigma}_{nn}^{-1} {{\bf Y}^n}{{\bf Y}^n}^{\mathrm{T}}) \\
+            &\hspace{1em} -\frac{Qn}{2} \log (2 \pi \sigma_x^2) - \frac{1}{2} {\rm tr} ({{\bf X}^n}{{\bf X}^n}^{\mathrm{T}})
+          \end{align}
+          となるから，これを目的関数として最大化すれば，${\bf X}^n$のMAP推定量は，次のように求められる．
+          \begin{align}
+            \hat{\bf X}^{n}_{MAP} &= \underset{X^n}{\rm argmax} ~ \log p({\bf Y}^n | {\bf X}^n) p({\bf X}^n) 
+          \end{align}
+
   \section{Deep Neural Networkのカーネル法による近似}
     \subsection{1層のFeed Forward Neural Network}
       ニューラルネットワークの全結合層や畳み込み層における推論計算は，線形写像と非線形の活性化関数の組み合わせによって構成される．
@@ -284,15 +357,15 @@
         \forall l \in [1, L] \subset \mathbb{N}, ~~~ {\bf W}^{(l)}_{ij} \sim i.i.d. ~ \mathcal{N}(0, \sigma^2_w)
       \end{align}
       を仮定する．
-      第$l$層のユニット数を$N_l$，第$l$層の空間を$\mathcal{T}^{(l)}$，第$l$層の出力を得る関数を$f^{(l)}: \mathcal{X} \to \mathcal{T}^{(l)}$とおく．
+      第$l$層のユニット数を$N^{(l)}$，第$l$層の空間を$\mathcal{T}^{(l)}$，第$l$層の出力を得る関数を$f^{(l)}: \mathcal{X} \to \mathcal{T}^{(l)}$とおく．
       任意の入力データ${\bf x}, {\bf x}' \in \mathcal{X}$に対して，Neural Networkの第$l$層に対応する共分散関数$k^{(l)}: \mathcal{T}^{(l)} \times \mathcal{T}^{(l)} \to \mathbb{R}$は，次の漸化式で求められる．
       \begin{align}
         k^{(1)}({\bf x}, {\bf x}') &= Cov \left[ f^{(1)}({\bf x}), f^{(1)}({\bf x}') \right] \nonumber \\
                                    &= Cov \left[ \phi({\bf W}^{(1)} {\bf x}), \phi({\bf W}^{(1)} {\bf x}') \right] \nonumber \\ 
-                                   &= \frac{1}{\pi \sigma_w^{N_1}} \| {\bf x} \| \| {\bf x}' \| J(\theta^{(0)}) \\
+                                   &= \frac{1}{\pi \sigma_w^{N^{(1)}}} \| {\bf x} \| \| {\bf x}' \| J(\theta^{(0)}) \\
         k^{(l+1)}({\bf x}, {\bf x}') &= Cov \left[ f^{(l+1)}({\bf x}), f^{(l+1)}({\bf x}') \right] \nonumber \\
                                      &= Cov \left[ \phi( {\bf W}^{(l+1)} \cdots \phi( {\bf W}^{(1)} {\bf x} )), \phi( {\bf W}^{(l+1)} \cdots \phi( {\bf W}^{(1)} {\bf x}' )) \right] \nonumber \\ 
-                                     &= \frac{1}{ \pi \sigma_w^{N_{l+1}}} \sqrt{ k^{(l)}({\bf x}, {\bf x}) } \sqrt{ k^{(l)}({\bf x}', {\bf x}') } J(\theta^{(l)})
+                                     &= \frac{1}{ \pi \sigma_{w}^{ N^{(l+1)}}} \sqrt{ k^{(l)}({\bf x}, {\bf x}) } \sqrt{ k^{(l)}({\bf x}', {\bf x}') } J(\theta^{(l)})
       \end{align}
       ただし，
       \begin{align}
@@ -303,18 +376,25 @@
           \cos^{-1} \left( \frac{k^{(l)}( {\bf x}, {\bf x}' )}{ \sqrt{ k^{(l)}({\bf x}, {\bf x}) } \sqrt{ k^{(l)}({\bf x}', {\bf x}') } } \right) ~~~ (l \neq 0) 
         \end{cases}
       \end{align}
-      とする．以上の結果から，第$l$層の出力$f^{(l)}$は以下のガウス過程で近似できる．
+      とする．以上の結果から，入力から第$l$層の各ユニットの出力値を得る関数$f^{(l)}_i: \mathcal{X} \to \mathbb{R}$は以下のガウス過程で近似できる．
       \begin{align}
-        f^{(l)}(\cdot) \sim \mathcal{GP}( {\bf 0} , k^{(l)}(\cdot,\cdot) )
+        f^{(l)}_i(\cdot) \sim \mathcal{GP}( 0, k^{(l)}(\cdot,\cdot) ), ~~~ (i=1,\dots,N^{(l)})
       \end{align}
 
   \section{Kernel Variational AutoEncoder}
+    前章での議論から，GP-LVMにおける潜在変数$X$と観測関数$Y$に対する確率モデル$p(Y|X)$を，
+    多層のFeed Forward Neural Networkに相当する関数
+    \begin{align}
+      f({\bf x}) = \phi( {\bf w}^{\mathrm{T}} {\bf x})
+    \end{align}
+    によって表現することを考える．
+
+
   \section{Experiments}
   \section{Conclusion}
 
   % \bibliography{ref} %hoge.bibから拡張子を外した名前
   % \bibliographystyle{junsrt} %参考文献出力スタイル
-
 
 \end{document}
 
