@@ -1,229 +1,2470 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2019.2.26)  25 OCT 2019 17:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.3)  28 OCT 2019 15:43
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
-pLaTeX2e <2018-04-01>+1 (based on LaTeX2e <2018-04-01> patch level 2)
+**/Users/uchiumi/workspace/KernelVAE/docs/main.tex
+(/Users/uchiumi/workspace/KernelVAE/docs/main.tex
+LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
-(/usr/local/texlive/2018/texmf-dist/tex/platex/base/jarticle.cls
-Document Class: jarticle 2018/02/04 v1.7h Standard pLaTeX class
-\c@@paper=\count83
-(/usr/local/texlive/2018/texmf-dist/tex/platex/base/jsize11.clo
-File: jsize11.clo 2018/02/04 v1.7h Standard pLaTeX file (size option)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
-\c@part=\count84
-\c@section=\count85
-\c@subsection=\count86
-\c@subsubsection=\count87
-\c@paragraph=\count88
-\c@subparagraph=\count89
-\c@figure=\count90
-\c@table=\count91
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
-\symmincho=\mathgroup4
-LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
-(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 614.
-\toclineskip=\dimen118
-\@lnumwidth=\dimen119
-\bibindent=\dimen120
-\heisei=\count92
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+\bibindent=\dimen102
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks15
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+\KV@toks@=\toks14
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: dvipdfmx.def on input line 99.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
 File: dvipdfmx.def 2017/06/24 v5.0g Graphics/color driver for dvipdfmx
 ))
-\Gin@req@height=\dimen121
-\Gin@req@width=\dimen122
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/preprint/authblk.sty
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/preprint/authblk.sty
 Package: authblk 2001/02/27 1.3 (PWD)
 \affilsep=\skip43
 \@affilsep=\skip44
-\c@Maxaffil=\count93
-\c@authors=\count94
-\c@affil=\count95
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
+\c@Maxaffil=\count88
+\c@authors=\count89
+\c@affil=\count90
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks16
-\ex@=\dimen123
-))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
+\@emptytoks=\toks15
+\ex@=\dimen105
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen124
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
+\pmbraise@=\dimen106
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count96
+\inf@bad=\count91
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count97
-\leftroot@=\count98
+\uproot@=\count92
+\leftroot@=\count93
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count99
-\DOTSCASE@=\count100
+\classnum@=\count94
+\DOTSCASE@=\count95
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box42
-\strutbox@=\box43
-\big@size=\dimen125
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count101
-\c@MaxMatrixCols=\count102
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
 \dotsspace@=\muskip10
-\c@parentequation=\count103
-\dspbrk@lvl=\count104
-\tag@help=\toks17
-\row@=\count105
-\column@=\count106
-\maxfields@=\count107
-\andhelp@=\toks18
-\eqnshift@=\dimen126
-\alignsep@=\dimen127
-\tagshift@=\dimen128
-\tagwidth@=\dimen129
-\totwidth@=\dimen130
-\lineht@=\dimen131
-\@envbody=\toks19
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks16
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks17
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks18
 \multlinegap=\skip46
 \multlinetaggap=\skip47
-\mathdisplay@stack=\toks20
+\mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup5
-\symAMSb=\mathgroup6
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-\c@dfn=\count108
-\c@thm=\count109
-\c@lem=\count110
-\c@exm=\count111
+\c@dfn=\count103
+\c@thm=\count104
+\c@lem=\count105
+\c@exm=\count106
 
-(./main.aux)
+
+LaTeX Warning: Unused global option(s):
+    [a4j].
+
+(/Users/uchiumi/workspace/KernelVAE/docs/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Try loading font information for U+msa on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Try loading font information for U+msa on input line 26.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 22.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+LaTeX Font Info:    Try loading font information for U+msb on input line 26.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 25.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 25.
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 30.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 30.
- (./main.toc
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 26.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
+
+No file main.toc.
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 36.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 36.
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:38: Package inputenc Error: Unicode character ガ (U+30AC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38   \section{ガウス過程と確率モデル}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:38: Package inputenc Error: Unicode character ウ (U+30A6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38   \section{ガウス過程と確率モデル}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:38: Package inputenc Error: Unicode character ス (U+30B9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38   \section{ガウス過程と確率モデル}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:38: Package inputenc Error: Unicode character 過 (U+904E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38   \section{ガウス過程と確率モデル}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:38: Package inputenc Error: Unicode character 程 (U+7A0B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38   \section{ガウス過程と確率モデル}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:38: Package inputenc Error: Unicode character と (U+3068)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38   \section{ガウス過程と確率モデル}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:38: Package inputenc Error: Unicode character 確 (U+78BA)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38   \section{ガウス過程と確率モデル}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:38: Package inputenc Error: Unicode character 率 (U+7387)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38   \section{ガウス過程と確率モデル}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:38: Package inputenc Error: Unicode character モ (U+30E2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38   \section{ガウス過程と確率モデル}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:38: Package inputenc Error: Unicode character デ (U+30C7)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38   \section{ガウス過程と確率モデル}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:38: Package inputenc Error: Unicode character ル (U+30EB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38   \section{ガウス過程と確率モデル}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:39: Package inputenc Error: Unicode character ガ (U+30AC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39     \subsection{ガウス分布}
+                                     
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:39: Package inputenc Error: Unicode character ウ (U+30A6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39     \subsection{ガウス分布}
+                                     
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:39: Package inputenc Error: Unicode character ス (U+30B9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39     \subsection{ガウス分布}
+                                     
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:39: Package inputenc Error: Unicode character 分 (U+5206)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39     \subsection{ガウス分布}
+                                     
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:39: Package inputenc Error: Unicode character 布 (U+5E03)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39     \subsection{ガウス分布}
+                                     
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character 任 (U+4EFB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41       任
+              意の$n \in \mathbb{N}$と${\{ a_i, b_i \in \mathbb{R} \}}_{i...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character 意 (U+610F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41       任意
+                 の$n \in \mathbb{N}$と${\{ a_i, b_i \in \mathbb{R} \}}_{i...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41       任意の
+                    $n \in \mathbb{N}$と${\{ a_i, b_i \in \mathbb{R} \}}_{i...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character 分 (U+5206)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41       任意の$
+                     n \in \mathbb{N}$と${\{ a_i, b_i \in \mathbb{R} \}}_{i...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character 布 (U+5E03)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41       任意の$
+                     n \in \mathbb{N}$と${\{ a_i, b_i \in \mathbb{R} \}}_{i...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41       任意の$
+                     n \in \mathbb{N}$と${\{ a_i, b_i \in \mathbb{R} \}}_{i...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character 再 (U+518D)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41       任意の$
+                     n \in \mathbb{N}$と${\{ a_i, b_i \in \mathbb{R} \}}_{i...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character 生 (U+751F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41       任意の$
+                     n \in \mathbb{N}$と${\{ a_i, b_i \in \mathbb{R} \}}_{i...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character 性 (U+6027)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41       任意の$
+                     n \in \mathbb{N}$と${\{ a_i, b_i \in \mathbb{R} \}}_{i...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character と (U+3068)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41       任意の$n \in \mathbb{N}$と
+                                         ${\{ a_i, b_i \in \mathbb{R} \}}_{i...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character に (U+306B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 ... a_i, b_i \in \mathbb{R} \}}_{i=1}^{n}$に
+                                                  対して，次が成り�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character 対 (U+5BFE)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 ...i, b_i \in \mathbb{R} \}}_{i=1}^{n}$に対
+                                                  して，次が成り立�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character し (U+3057)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 ...b_i \in \mathbb{R} \}}_{i=1}^{n}$に対し
+                                                  て，次が成り立つ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character て (U+3066)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 ... \in \mathbb{R} \}}_{i=1}^{n}$に対して
+                                                  ，次が成り立つ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character ， (U+FF0C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 ...n \mathbb{R} \}}_{i=1}^{n}$に対して，
+                                                  次が成り立つ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character 次 (U+6B21)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 ...mathbb{R} \}}_{i=1}^{n}$に対して，次
+                                                  が成り立つ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character が (U+304C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 ...hbb{R} \}}_{i=1}^{n}$に対して，次が
+                                                  成り立つ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character 成 (U+6210)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 ...{R} \}}_{i=1}^{n}$に対して，次が成
+                                                  り立つ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character り (U+308A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 ... \}}_{i=1}^{n}$に対して，次が成り
+                                                  立つ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character 立 (U+7ACB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 ...}_{i=1}^{n}$に対して，次が成り立
+                                                  つ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character つ (U+3064)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 ...i=1}^{n}$に対して，次が成り立つ
+                                                  ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:41: Package inputenc Error: Unicode character ． (U+FF0E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 ...}^{n}$に対して，次が成り立つ．
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character 任 (U+4EFB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48       任
+              意の2つのベクトル${\bf f}_n \in \mathbb{R}^{n}, {\bf f...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character 意 (U+610F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48       任意
+                 の2つのベクトル${\bf f}_n \in \mathbb{R}^{n}, {\bf f...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48       任意の
+                    2つのベクトル${\bf f}_n \in \mathbb{R}^{n}, {\bf f...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character 条 (U+6761)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48       任意の2
+                     つのベクトル${\bf f}_n \in \mathbb{R}^{n}, {\bf f...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character 件 (U+4EF6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48       任意の2
+                     つのベクトル${\bf f}_n \in \mathbb{R}^{n}, {\bf f...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character つ (U+3064)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48       任意の2
+                     つのベクトル${\bf f}_n \in \mathbb{R}^{n}, {\bf f...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character き (U+304D)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48       任意の2
+                     つのベクトル${\bf f}_n \in \mathbb{R}^{n}, {\bf f...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character 分 (U+5206)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48       任意の2
+                     つのベクトル${\bf f}_n \in \mathbb{R}^{n}, {\bf f...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character 布 (U+5E03)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48       任意の2
+                     つのベクトル${\bf f}_n \in \mathbb{R}^{n}, {\bf f...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48       任意の2
+                     つのベクトル${\bf f}_n \in \mathbb{R}^{n}, {\bf f...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character 計 (U+8A08)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48       任意の2
+                     つのベクトル${\bf f}_n \in \mathbb{R}^{n}, {\bf f...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character 算 (U+7B97)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48       任意の2
+                     つのベクトル${\bf f}_n \in \mathbb{R}^{n}, {\bf f...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character つ (U+3064)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48       任意の2つ
+                        のベクトル${\bf f}_n \in \mathbb{R}^{n}, {\bf f...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48       任意の2つの
+                           ベクトル${\bf f}_n \in \mathbb{R}^{n}, {\bf f...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character ベ (U+30D9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48       任意の2つのベ
+                              クトル${\bf f}_n \in \mathbb{R}^{n}, {\bf f...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character ク (U+30AF)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48       任意の2つのベク
+                                 トル${\bf f}_n \in \mathbb{R}^{n}, {\bf f...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character ト (U+30C8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48       任意の2つのベクト
+                                    ル${\bf f}_n \in \mathbb{R}^{n}, {\bf f...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character ル (U+30EB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48       任意の2つのベクトル
+                                       ${\bf f}_n \in \mathbb{R}^{n}, {\bf f...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character に (U+306B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 ...b{R}^{n}, {\bf f}_m \in \mathbb{R}^{m}$に
+                                                  対して，
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character 対 (U+5BFE)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 ...}^{n}, {\bf f}_m \in \mathbb{R}^{m}$に対
+                                                  して，
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character し (U+3057)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 ...n}, {\bf f}_m \in \mathbb{R}^{m}$に対し
+                                                  て，
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character て (U+3066)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 ... {\bf f}_m \in \mathbb{R}^{m}$に対して
+                                                  ，
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:48: Package inputenc Error: Unicode character ， (U+FF0C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 ...bf f}_m \in \mathbb{R}^{m}$に対して，
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:70: Package inputenc Error: Unicode character な (U+306A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70       な
+              らば，次が成り立つ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:70: Package inputenc Error: Unicode character ら (U+3089)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70       なら
+                 ば，次が成り立つ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:70: Package inputenc Error: Unicode character ば (U+3070)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70       ならば
+                    ，次が成り立つ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:70: Package inputenc Error: Unicode character ， (U+FF0C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70       ならば，
+                       次が成り立つ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:70: Package inputenc Error: Unicode character 次 (U+6B21)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70       ならば，次
+                          が成り立つ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:70: Package inputenc Error: Unicode character が (U+304C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70       ならば，次が
+                             成り立つ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:70: Package inputenc Error: Unicode character 成 (U+6210)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70       ならば，次が成
+                                り立つ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:70: Package inputenc Error: Unicode character り (U+308A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70       ならば，次が成り
+                                   立つ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:70: Package inputenc Error: Unicode character 立 (U+7ACB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70       ならば，次が成り立
+                                      つ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:70: Package inputenc Error: Unicode character つ (U+3064)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70       ならば，次が成り立つ
+                                         ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:70: Package inputenc Error: Unicode character ． (U+FF0E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70       ならば，次が成り立つ．
+                                            
+You may provide a definition with
+\DeclareUnicodeCharacter 
 
 [1
 
-] [2]
-Overfull \hbox (1.19878pt too wide) in paragraph at lines 118--124
-\JY1/mc/m/n/10.95 が成り立つ ． ただし ， $\OML/cmm/m/it/10.95 m\OT1/cmr/m/n/10
-.95 (\OML/cmm/m/it/10.95 X[]\OT1/cmr/m/n/10.95 ) = [][]$\JY1/mc/m/n/10.95 ， $\
-OML/cmm/m/it/10.95 K\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[]; K\OT1/cmr/m/n/
-10.95 (\OML/cmm/m/it/10.95 X[]\OT1/cmr/m/n/10.95 ))[] = \OML/cmm/m/it/10.95 k\O
-T1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 f\OT1/cmr/m/n/10.95 (\OT1/cmr/bx/n/10.95 
-x[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; f\OT1/cmr/m/n/10.95 (\OT1/cmr/bx/n
-/10.95 x[]\OT1/cmr/m/n/10.95 ))$\JY1/mc/m/n/10.95 ，
- []
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-[3]
-Overfull \hbox (32.67049pt too wide) detected at line 180
-[]
- []
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:82: Package inputenc Error: Unicode character ガ (U+30AC)
+(inputenc)                not set up for use with LaTeX.
 
-[4] [5]
-
-LaTeX Font Warning: Font shape `JT1/mc/m/it' undefined
-(Font)              using `JT1/mc/m/n' instead on input line 302.
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.82     \subsection{ガウス過程(GP)}
+                                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
 
 
-LaTeX Font Warning: Font shape `JY1/mc/m/it' undefined
-(Font)              using `JY1/mc/m/n' instead on input line 302.
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:82: Package inputenc Error: Unicode character ウ (U+30A6)
+(inputenc)                not set up for use with LaTeX.
 
-[6] [7] [8] [9] (./main.aux)
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.82     \subsection{ガウス過程(GP)}
+                                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
 
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
- ) 
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:82: Package inputenc Error: Unicode character ス (U+30B9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.82     \subsection{ガウス過程(GP)}
+                                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:82: Package inputenc Error: Unicode character 過 (U+904E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.82     \subsection{ガウス過程(GP)}
+                                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:82: Package inputenc Error: Unicode character 程 (U+7A0B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.82     \subsection{ガウス過程(GP)}
+                                         
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character 入 (U+5165)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83       入
+              力空間$\mathcal{X}$上の関数$f: \mathcal{X} \to \mathbb{...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character 力 (U+529B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83       入力
+                 空間$\mathcal{X}$上の関数$f: \mathcal{X} \to \mathbb{...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character 空 (U+7A7A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83       入力空
+                    間$\mathcal{X}$上の関数$f: \mathcal{X} \to \mathbb{...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character 間 (U+9593)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83       入力空間
+                       $\mathcal{X}$上の関数$f: \mathcal{X} \to \mathbb{...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character 上 (U+4E0A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83       入力空間$\mathcal{X}$上
+                                       の関数$f: \mathcal{X} \to \mathbb{...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83       入力空間$\mathcal{X}$上の
+                                          関数$f: \mathcal{X} \to \mathbb{...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character 関 (U+95A2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83       入力空間$\mathcal{X}$上の関
+                                             数$f: \mathcal{X} \to \mathbb{...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character 数 (U+6570)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83       入力空間$\mathcal{X}$上の関数
+                                                $f: \mathcal{X} \to \mathbb{...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character が (U+304C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...��関数$f: \mathcal{X} \to \mathbb{R}$が
+                                                  ガウス過程(Gaussian P...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character ガ (U+30AC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...��数$f: \mathcal{X} \to \mathbb{R}$がガ
+                                                  ウス過程(Gaussian Proc...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character ウ (U+30A6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...��$f: \mathcal{X} \to \mathbb{R}$がガウ
+                                                  ス過程(Gaussian Process...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character ス (U+30B9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...f: \mathcal{X} \to \mathbb{R}$がガウス
+                                                  過程(Gaussian Process, G...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character 過 (U+904E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...\mathcal{X} \to \mathbb{R}$がガウス過
+                                                  程(Gaussian Process, GP)�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character 程 (U+7A0B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...thcal{X} \to \mathbb{R}$がガウス過程
+                                                  (Gaussian Process, GP)に�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character に (U+306B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...��ガウス過程(Gaussian Process, GP)に
+                                                  従うとは，$\mathcal{X...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character 従 (U+5F93)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...��ウス過程(Gaussian Process, GP)に従
+                                                  うとは，$\mathcal{X}$�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character う (U+3046)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...��ス過程(Gaussian Process, GP)に従う
+                                                  とは，$\mathcal{X}$上�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character と (U+3068)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...��過程(Gaussian Process, GP)に従うと
+                                                  は，$\mathcal{X}$上の�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character は (U+306F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...��程(Gaussian Process, GP)に従うとは
+                                                  ，$\mathcal{X}$上の任�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character ， (U+FF0C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...��(Gaussian Process, GP)に従うとは，
+                                                  $\mathcal{X}$上の任意�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character 上 (U+4E0A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...ess, GP)に従うとは，$\mathcal{X}$上
+                                                  の任意の$n$点${ \{ x_...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ..., GP)に従うとは，$\mathcal{X}$上の
+                                                  任意の$n$点${ \{ x_i \...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character 任 (U+4EFB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...P)に従うとは，$\mathcal{X}$上の任
+                                                  意の$n$点${ \{ x_i \} }...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character 意 (U+610F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...��従うとは，$\mathcal{X}$上の任意
+                                                  の$n$点${ \{ x_i \} }_{i...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...��うとは，$\mathcal{X}$上の任意の
+                                                  $n$点${ \{ x_i \} }_{i=1}...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character 点 (U+70B9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...��は，$\mathcal{X}$上の任意の$n$点
+                                                  ${ \{ x_i \} }_{i=1}^{n}$�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character に (U+306B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...��意の$n$点${ \{ x_i \} }_{i=1}^{n}$に
+                                                  対して，
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character 対 (U+5BFE)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...��の$n$点${ \{ x_i \} }_{i=1}^{n}$に対
+                                                  して，
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character し (U+3057)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...��$n$点${ \{ x_i \} }_{i=1}^{n}$に対し
+                                                  て，
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character て (U+3066)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...n$点${ \{ x_i \} }_{i=1}^{n}$に対して
+                                                  ，
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:83: Package inputenc Error: Unicode character ， (U+FF0C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...��${ \{ x_i \} }_{i=1}^{n}$に対して，
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character ベ (U+30D9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84       ベ
+              クトル${\bf f} = { ( f(x_1),\dots,f(x_n) ) }^{\mathrm{T}} \...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character ク (U+30AF)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84       ベク
+                 トル${\bf f} = { ( f(x_1),\dots,f(x_n) ) }^{\mathrm{T}} \...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character ト (U+30C8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84       ベクト
+                    ル${\bf f} = { ( f(x_1),\dots,f(x_n) ) }^{\mathrm{T}} \...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character ル (U+30EB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84       ベクトル
+                       ${\bf f} = { ( f(x_1),\dots,f(x_n) ) }^{\mathrm{T}} \...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character が (U+304C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ...n) ) }^{\mathrm{T}} \in \mathbb{R}^{n}$が
+                                                  $n$次元ガウス分布�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character 次 (U+6B21)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ...^{\mathrm{T}} \in \mathbb{R}^{n}$が$n$次
+                                                  元ガウス分布に従�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character 元 (U+5143)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ...mathrm{T}} \in \mathbb{R}^{n}$が$n$次元
+                                                  ガウス分布に従う�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character ガ (U+30AC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ...hrm{T}} \in \mathbb{R}^{n}$が$n$次元ガ
+                                                  ウス分布に従うこ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character ウ (U+30A6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ...{T}} \in \mathbb{R}^{n}$が$n$次元ガウ
+                                                  ス分布に従うこと�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character ス (U+30B9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ...} \in \mathbb{R}^{n}$が$n$次元ガウス
+                                                  分布に従うことを�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character 分 (U+5206)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ...in \mathbb{R}^{n}$が$n$次元ガウス分
+                                                  布に従うことをい�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character 布 (U+5E03)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ...\mathbb{R}^{n}$が$n$次元ガウス分布
+                                                  に従うことをいう．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character に (U+306B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ...thbb{R}^{n}$が$n$次元ガウス分布に
+                                                  従うことをいう．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character 従 (U+5F93)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ...b{R}^{n}$が$n$次元ガウス分布に従
+                                                  うことをいう．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character う (U+3046)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ...}^{n}$が$n$次元ガウス分布に従う
+                                                  ことをいう．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character こ (U+3053)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ...n}$が$n$次元ガウス分布に従うこ
+                                                  とをいう．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character と (U+3068)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ...が$n$次元ガウス分布に従うこと
+                                                  をいう．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character を (U+3092)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ...$n$次元ガウス分布に従うことを
+                                                  いう．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character い (U+3044)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ...次元ガウス分布に従うことをい
+                                                  う．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character う (U+3046)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ...元ガウス分布に従うことをいう
+                                                  ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:84: Package inputenc Error: Unicode character ． (U+FF0E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ...ガウス分布に従うことをいう．
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character こ (U+3053)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85       こ
+              こで，確率変数${\bf f} \in \mathbb{R}^{n}$が$n$次元�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character こ (U+3053)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85       ここ
+                 で，確率変数${\bf f} \in \mathbb{R}^{n}$が$n$次元�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character で (U+3067)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85       ここで
+                    ，確率変数${\bf f} \in \mathbb{R}^{n}$が$n$次元�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character ， (U+FF0C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85       ここで，
+                       確率変数${\bf f} \in \mathbb{R}^{n}$が$n$次元�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 確 (U+78BA)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85       ここで，確
+                          率変数${\bf f} \in \mathbb{R}^{n}$が$n$次元�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 率 (U+7387)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85       ここで，確率
+                             変数${\bf f} \in \mathbb{R}^{n}$が$n$次元�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 変 (U+5909)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85       ここで，確率変
+                                数${\bf f} \in \mathbb{R}^{n}$が$n$次元�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 数 (U+6570)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85       ここで，確率変数
+                                   ${\bf f} \in \mathbb{R}^{n}$が$n$次元�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character が (U+304C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...��率変数${\bf f} \in \mathbb{R}^{n}$が
+                                                  $n$次元ガウス分布�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 次 (U+6B21)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...��数${\bf f} \in \mathbb{R}^{n}$が$n$次
+                                                  元ガウス分布に従�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 元 (U+5143)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...��${\bf f} \in \mathbb{R}^{n}$が$n$次元
+                                                  ガウス分布に従う�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character ガ (U+30AC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...{\bf f} \in \mathbb{R}^{n}$が$n$次元ガ
+                                                  ウス分布に従う時�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character ウ (U+30A6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...f f} \in \mathbb{R}^{n}$が$n$次元ガウ
+                                                  ス分布に従う時，�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character ス (U+30B9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...} \in \mathbb{R}^{n}$が$n$次元ガウス
+                                                  分布に従う時，そ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 分 (U+5206)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...in \mathbb{R}^{n}$が$n$次元ガウス分
+                                                  布に従う時，その�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 布 (U+5E03)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...\mathbb{R}^{n}$が$n$次元ガウス分布
+                                                  に従う時，その確�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character に (U+306B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...thbb{R}^{n}$が$n$次元ガウス分布に
+                                                  従う時，その確率�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 従 (U+5F93)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...b{R}^{n}$が$n$次元ガウス分布に従
+                                                  う時，その確率密�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character う (U+3046)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...}^{n}$が$n$次元ガウス分布に従う
+                                                  時，その確率密度�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 時 (U+6642)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...n}$が$n$次元ガウス分布に従う時
+                                                  ，その確率密度関�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character ， (U+FF0C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...が$n$次元ガウス分布に従う時，
+                                                  その確率密度関数$p...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character そ (U+305D)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...$n$次元ガウス分布に従う時，そ
+                                                  の確率密度関数$p({\...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...次元ガウス分布に従う時，その
+                                                  確率密度関数$p({\bf ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 確 (U+78BA)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...元ガウス分布に従う時，その確
+                                                  率密度関数$p({\bf f})...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 率 (U+7387)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...ガウス分布に従う時，その確率
+                                                  密度関数$p({\bf f})$�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 密 (U+5BC6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...ウス分布に従う時，その確率密
+                                                  度関数$p({\bf f})$は�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 度 (U+5EA6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...ス分布に従う時，その確率密度
+                                                  関数$p({\bf f})$は，�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 関 (U+95A2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...分布に従う時，その確率密度関
+                                                  数$p({\bf f})$は，平�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 数 (U+6570)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...布に従う時，その確率密度関数
+                                                  $p({\bf f})$は，平均�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character は (U+306F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...，その確率密度関数$p({\bf f})$は
+                                                  ，平均関数${m}(\cdot)...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character ， (U+FF0C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...その確率密度関数$p({\bf f})$は，
+                                                  平均関数${m}(\cdot)$�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 平 (U+5E73)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...の確率密度関数$p({\bf f})$は，平
+                                                  均関数${m}(\cdot)$と�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 均 (U+5747)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...確率密度関数$p({\bf f})$は，平均
+                                                  関数${m}(\cdot)$と共�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 関 (U+95A2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...率密度関数$p({\bf f})$は，平均関
+                                                  数${m}(\cdot)$と共分�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 数 (U+6570)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...密度関数$p({\bf f})$は，平均関数
+                                                  ${m}(\cdot)$と共分散�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character と (U+3068)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...{\bf f})$は，平均関数${m}(\cdot)$と
+                                                  共分散関数$v(\cdot,\c...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 共 (U+5171)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...f f})$は，平均関数${m}(\cdot)$と共
+                                                  分散関数$v(\cdot,\cdot...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 分 (U+5206)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...})$は，平均関数${m}(\cdot)$と共分
+                                                  散関数$v(\cdot,\cdot)$�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 散 (U+6563)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...は，平均関数${m}(\cdot)$と共分散
+                                                  関数$v(\cdot,\cdot)$を�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 関 (U+95A2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...，平均関数${m}(\cdot)$と共分散関
+                                                  数$v(\cdot,\cdot)$を用�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 数 (U+6570)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...平均関数${m}(\cdot)$と共分散関数
+                                                  $v(\cdot,\cdot)$を用いて
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character を (U+3092)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...dot)$と共分散関数$v(\cdot,\cdot)$を
+                                                  用いて
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character 用 (U+7528)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...)$と共分散関数$v(\cdot,\cdot)$を用
+                                                  いて
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character い (U+3044)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...��共分散関数$v(\cdot,\cdot)$を用い
+                                                  て
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:85: Package inputenc Error: Unicode character て (U+3066)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...��分散関数$v(\cdot,\cdot)$を用いて
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:89: Package inputenc Error: Unicode character と (U+3068)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.89       と
+              定められる．ただし，$V({\bf f})$は共分散$v({\bf ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:89: Package inputenc Error: Unicode character 定 (U+5B9A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.89       と定
+                 められる．ただし，$V({\bf f})$は共分散$v({\bf ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:89: Package inputenc Error: Unicode character め (U+3081)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.89       と定め
+                    られる．ただし，$V({\bf f})$は共分散$v({\bf ...
+(That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 1730 strings out of 493281
- 20081 string characters out of 6145041
- 94775 words of memory out of 5000000
- 5652 multiletter control sequences out of 15000+600000
- 24592 words of font info for 96 fonts, out of 8000000 for 9000
- 929 hyphenation exceptions out of 8191
- 27i,20n,27p,223b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 1721 strings out of 492649
+ 20196 string characters out of 6129623
+ 83547 words of memory out of 5000000
+ 5601 multiletter control sequences out of 15000+600000
+ 16312 words of font info for 61 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 30i,20n,27p,272b,313s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (9 pages, 36124 bytes).
+/Users/uchiumi/workspace/KernelVAE/docs/main.tex:89:  ==> Fatal error occurred, no output PDF file produced!

@@ -1,6 +1,6 @@
-\documentclass[11pt,a4j]{jarticle}
+\documentclass[11pt,a4j]{article}
 
-% パッケージ
+% import packages
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{authblk}
 \usepackage{amsmath}
@@ -10,15 +10,19 @@
 \newtheorem{thm}{定理}
 \newtheorem{lem}{補題}
 \newtheorem{exm}{例}
+
+% define new command 
+\newcommand{\indep}{\mathop{\perp\!\!\!\perp}}
+\newcommand{\notindep}{\mathop{\perp\!\!\!\!\!\!/\!\!\!\!\!\!\perp}}
  
-% タイトル
-\title{Kernel VAE: カーネル法を用いた次元削減}
+% Title
+\title{Kernel VAE: Gaussian Process Latent Variable Model on Deep Neural Network}
 \date{2019/10/11}
-\author[1]{内海 佑麻\thanks{uchiumi@ailab.ics.keio.ac.jp}}
-\affil[1]{慶應義塾大学理工学部情報工学科}
+\author[1]{Yuma Uchiumi\thanks{uchiumi@ailab.ics.keio.ac.jp}}
+\affil[1]{Department of Information and Computer Science, Faculty of Science and Technology, Keio University, Japan}
 
 \begin{document}
-  % タイトル
+  % Title
   \maketitle
   
   % Abstract
@@ -26,13 +30,12 @@
     ...
   \end{abstract}
 
-  % 目次
+  % Contents
   \tableofcontents
 
   \section{Introduction}
     ...
   \section{ガウス過程と確率モデル}
-
     \subsection{ガウス分布}
     \paragraph{分布の再生性}
       任意の$n \in \mathbb{N}$と${\{ a_i, b_i \in \mathbb{R} \}}_{i=1}^{n}$に対して，次が成り立つ．
@@ -247,108 +250,133 @@
 
   \section{Deep Neural Networkのカーネル法による近似}
     \subsection{1層のFeed Forward Neural Network}
-      ニューラルネットワークの全結合層や畳み込み層における推論計算は，線形写像と非線形の活性化関数の組み合わせによって構成される．
-      ここで，ある層の入力ベクトルを${\bf x} \in \mathbb{R}^{N}$，
-      出力ベクトルを${\bf y} \in \mathbb{R}^{M}$，
-      線形写像に対応する変換行列を${\bf W} \in \mathbb{R}^{M \times N}$，
-      活性化関数を$\phi: \mathbb{R}^{M} \to \mathbb{R}^{M}$とすると，
-      非線形関数$f:{\bf x} \mapsto {\bf y}$は以下のように構成される．
-      \begin{align}
-        {\bf y} = f({\bf x}) = \phi( {\bf W x} )
-      \end{align}
-      なお，全結合層に置けるバイアスベクトルの追加に関しては，$\bf x$と$\bf W$に次元を1つ追加することで上式と等価となり，
-      畳み込み層に置けるフィルタ演算もim2colによって上式と等価となることに注意する．
-      ここで，関数$f$に対する内積${f(\cdot)}^{\mathrm{T}}f(\cdot): {\bf x} \times {\bf x}' \mapsto \mathbb{R}$を考える．
-      活性化関数$\phi$としてReLUを仮定して，対応する指示関数
-      \begin{align}
-        {\mathrm{I}}(x) = 
-        \begin{cases}
-          1 ~ (x \geq 0) \\
-          0 ~ (x < 0)
-        \end{cases}
-      \end{align}
-      を定義すると，$\forall {\bf x},{\bf x}'$に対する内積は，
-      \begin{align}
-        {f({\bf x})}^{\mathrm{T}} f({\bf x}') = \sum_{i=1}^{M} 
-        {\mathrm{I}}( {\bf w}_{i}^{\mathrm{T}} {\bf x} ) {\mathrm{I}}( {\bf w}_{i}^{\mathrm{T}} {\bf x}' ) 
-        ( {\bf w}_{i}^{\mathrm{T}} {\bf x} ) ( {\bf w}_{i}^{\mathrm{T}} {\bf x}' )
-      \end{align}
-      となる．ただし，${\bf w}_i = {( {\bf W}_{i1},\dots,{\bf W}_{iN} )}^{\mathrm{T}} \in \mathbb{R}^{N}$とする．
-      いま，行列$\bf W$の各要素${\bf W}_{ij}$をi.i.d.となる確率変数と仮定すると，
-      すべての$i$に対して${\bf w}_i$もi.i.d.となる，また，確率変数${\bf W}_{ij}$は平均と分散として，それぞれ$0$，$\sigma_w^2$を与える．
-      \begin{align}
-        \forall i,j, ~ {\bf W}_{ij} \sim i.i.d. \\
-        E[{\bf W}_{ij}] = 0, ~ V[{\bf W}_{ij}] = \sigma_w^2
-      \end{align}
-      すると，中心極限定理(Central Limit Theorem)より，${\bf x}$を固定したとき，任意の${\bf w}$の関数$C({\bf w})$に対して，
-      \begin{align}
-        E\left[ \frac{1}{M} \sum_{i=1}^{M} C({\bf w}_i) \right] \to
-        \int d{\bf w} \frac{\exp (\frac{- {|| {\bf w} ||}^2}{2})}{{(2 \pi \sigma_w^2 )}^{N / 2}}
-        C({\bf w}_i) ~~~ (M \to \infty)
-      \end{align}
-      が満たされるから，
-      \begin{align}
-        &E\left[ \frac{1}{M} {f({\bf x})}^{\mathrm{T}} f({\bf x}') \right] 
-        = E\left[ \frac{1}{M} \sum_{i=1}^{M} {\mathrm{I}}( {\bf w}_{i}^{\mathrm{T}} {\bf x} ) {\mathrm{I}}( {\bf w}_{i}^{\mathrm{T}} {\bf x}' ) 
-        ( {\bf w}_{i}^{\mathrm{T}} {\bf x} ) ( {\bf w}_{i}^{\mathrm{T}} {\bf x}' ) \right] 
-        \to \nonumber \\
-        &\int d{\bf w} \frac{\exp (\frac{- {|| {\bf w} ||}^2}{2})}{{(2 \pi \sigma_w^2 )}^{N / 2}}
-        {\mathrm{I}}( {\bf w}^{\mathrm{T}} {\bf x} ) {\mathrm{I}}( {\bf w}^{\mathrm{T}} {\bf x}' ) 
-        ( {\bf w}^{\mathrm{T}} {\bf x} ) ( {\bf w}^{\mathrm{T}} {\bf x}' ) ~~~ (M \to \infty) \label{form:kernel_f} 
-      \end{align}
-      が成り立つ．式(\ref{form:kernel_f})右辺を整理すると，以下の定理が導かれる．
+      \subsubsection{線形写像に対応するガウス過程}
+        ニューラルネットワークの全結合層や畳み込み層における推論計算は，線形写像と非線形の活性化関数の組み合わせによって構成される．
+        ここで，ある層の入力ベクトルを${\bf x} \in \mathcal{X} \subseteq \mathbb{R}^{N}$，
+        出力ベクトルを${\bf y} \in \mathcal{Y} \subseteq \mathbb{R}^{M}$，
+        線形写像に対応する変換行列を${\bf W} \in \mathbb{R}^{M \times N}$，
+        活性化関数を$\phi: \mathbb{R} \to \mathbb{R}$とすると，各ノード${y}_i$への推論処理は以下のように構成される．
+        \begin{align}
+          y_i &= \phi(z_i({\bf x})), ~~~ z_i({\bf x}) = {{\bf w}_i}^{\mathrm{T}} {\bf x} = \sum_{j=1}^{N} {w}_{ij} {x}_j, ~~~ (i=1,\dots,M) \label{form:nn_inference}
+        \end{align}
+        ただし，$w_{ij}$は行列$\bf W$の$ij$要素とし，${\bf w}_i = {( w_{i1}, \dots, w_{iN} )}^{\mathrm{T}} \in \mathbb{R}^{N}$とする．
+        なお，全結合層に置けるバイアスベクトルの追加に関しては，$\bf x$と$\bf W$に次元を1つ追加することで上式と等価となり，
+        畳み込み層に置けるフィルタ演算もim2colによって上式と等価となることに注意する．ここで，重み行列$\bf W$の各要素$w_{ij}$に対して，
+        \begin{align}
+          w_{ij} ~~ i.i.d. \sim p_w(\cdot), ~~~
+          E[w_{ij}] = 0, ~ V[w_{ij}] = \sigma_w^2
+        \end{align}
+        を仮定すると，任意の入力${\bf x}$に対して，$x_j \indep x_{j'} ~ (j \neq j' )$だから，中心極限定理(Central Limit Therem)より，
+        \begin{align}
+          z_i({\bf x}) ~ \sim ~ \mathcal{N}(0, \sigma_w^2) ~~~ (N \to \infty)
+        \end{align}
+        が成り立つ．すなわち$n$個の入力${\{ {\bf x}^{(i)} \}}_{i=1}^{n}$が与えられたとき，
+        ${\bf z}_i = { ( z_i({\bf x}^{(1)}),\dots,z_i({\bf x}^{(n)}) ) }^{\mathrm{T}} \in \mathbb{R}^{n}$は$n$次元ガウス分布に従うから，
+        \begin{align}
+          z_i(\cdot) \sim \mathcal{GP}(0, k(\cdot,\cdot))
+        \end{align}
+        が与えられる．このガウス過程を用いて上述の推論処理を解く際には，
+        共分散関数(カーネル関数)$k(\cdot,\cdot): \mathbb{R}^{N} \times \mathbb{R}^{N} \to \mathbb{R}$を特定する必要がある．
+        実際，任意の入力${\bf x}, {\bf x}' \in \mathcal{X}$に対して，
+        \begin{align}
+          k( {\bf x}, {\bf x}' ) 
+          &= Cov[z_i({\bf x}), z_i({\bf x}')] \\ 
+          &= E[z_i({\bf x}) z_i({\bf x}')] \\
+          &= \sigma_w^2 E[ x_i {x'}_i ] 
+        \end{align}
+        となることに注意する．
 
-      \begin{dfn}
-        (arc-cosine kernel)
-        任意の2つのベクトル${\bf x}, {\bf x}' \in \mathcal{X} \subset \mathbb{R}^{N}$に対して，
+      \subsubsection{正定値カーネルによる近似}
+        式(\ref{form:nn_inference})の推論処理をまとめて関数$f_i:\mathbb{R}^{N} \to \mathbb{R}$とおく．
         \begin{align}
-          \theta &= {\cos}^{-1} \left( \frac{{\bf x}^{\mathrm{T}} {\bf x}'}{ \|{\bf x}\| \|{\bf x}'\| } \right) \\
-          J(\theta) &= \sin \theta + (\pi - \theta) \cos \theta
+          y_i = f_i({\bf x}) = \phi( {{\bf w}_i}^{\mathrm{T}} {\bf x} )
         \end{align}
-        とおき，arc-cosineカーネル
+        ここで，関数$f_i$に対する内積${f_i(\cdot)}^{\mathrm{T}} f_i(\cdot): {\bf x} \times {\bf x}' \mapsto \mathbb{R}$を考える．
+        活性化関数$\phi$としてReLUを仮定して，対応する指示関数
         \begin{align}
-          k^{(1)}({\bf x}, {\bf x}') = \frac{1}{\pi} \| {\bf x} \| \| {\bf x}' \| J(\theta) ~~ (M \to \infty)
+          {\mathrm{I}}(x) = 
+          \begin{cases}
+            1 ~ (x \geq 0) \\
+            0 ~ (x < 0)
+          \end{cases}
         \end{align}
-        を定義する．
-      \end{dfn}
+        を定義すると，
+        \begin{align}
+          {f_i({\bf x})} f_i({\bf x}') 
+          &= {\mathrm{I}}( {\bf w}_{i}^{\mathrm{T}} {\bf x} ) {\mathrm{I}}( {\bf w}_{i}^{\mathrm{T}} {\bf x}' ) 
+          ( {\bf w}_{i}^{\mathrm{T}} {\bf x} ) ( {\bf w}_{i}^{\mathrm{T}} {\bf x}' ) \\
+          &= {\mathrm{I}}(\sum_{j=1}^{N} {w}_{ij} {x}_j) {\mathrm{I}}(\sum_{j=1}^{N} {w}_{ij} {x'}_j)
+          ( \sum_{j=1}^{N} {w}_{ij} {x}_j ) ( \sum_{j=1}^{N} {w}_{ij} {x'}_j )          
+        \end{align}
+        となる．
+        中心極限定理(Central Limit Theorem)より，任意の${\bf w} \in \mathbb{R}^{N}$の関数$C({\bf w})$に対して，
+        \begin{align}
+          E\left[ \frac{1}{M} \sum_{i=1}^{M} C({\bf w}_i) \right] \to
+          \int d{\bf w} \frac{\exp (\frac{- {|| {\bf w} ||}^2}{2})}{{(2 \pi \sigma_w^2 )}^{N / 2}}
+          C({\bf w}) ~~~ (M \to \infty)
+        \end{align}
+        が満たされるから，${\bf x}, {\bf x}'$を固定したとき，
+        \begin{align}
+          &E\left[ \frac{1}{M} \sum_{i=1}^{M} {f_i ({\bf x})} f_i ({\bf x}') \right] 
+          = E\left[ \frac{1}{M} \sum_{i=1}^{M} {\mathrm{I}}( {\bf w}_{i}^{\mathrm{T}} {\bf x} ) {\mathrm{I}}( {\bf w}_{i}^{\mathrm{T}} {\bf x}' ) 
+          ( {\bf w}_{i}^{\mathrm{T}} {\bf x} ) ( {\bf w}_{i}^{\mathrm{T}} {\bf x}' ) \right] \nonumber \\
+          &\to \int d{\bf w} \frac{\exp (\frac{- {|| {\bf w} ||}^2}{2})}{{(2 \pi \sigma_w^2 )}^{N / 2}}
+          {\mathrm{I}}( {\bf w}^{\mathrm{T}} {\bf x} ) {\mathrm{I}}( {\bf w}^{\mathrm{T}} {\bf x}' ) 
+          ( {\bf w}^{\mathrm{T}} {\bf x} ) ( {\bf w}^{\mathrm{T}} {\bf x}' ) ~~~ (M \to \infty) \label{form:kernel_f} 
+        \end{align}
+        が成り立つ．式(\ref{form:kernel_f})右辺を整理すると，以下の定理が導かれる．
 
-      \begin{thm}\label{thm:clt_dnn}
-        各要素$W_{ij}$が互いに独立に正規分布$\mathcal{N}(0, 1)$に従うランダム行列${\bf W} \in \mathbb{R}^{M \times N}$を考える．
-        活性化関数としてReLU関数$\phi$を用いて，1層のニューラルネットワークに相当する関数$f:\mathbb{R}^{N} \to \mathbb{R}^{M}$:
-        \begin{align}
-          f({\bf x}) = \phi({\bf Wx}) ~~ (\forall {\bf x} \in \mathbb{R}^{N})
-        \end{align}
-        を考える．このとき任意の${\bf x}, {\bf x}' \in \mathbb{R}^{N}$に対して，
-        \begin{align}
-          E \left[ \frac{1}{M} {f({\bf x})}^{\mathrm{T}} f({\bf x}') \right] \to
-          \frac{1}{\sigma_w^N} k^{(1)}({\bf x}, {\bf x}') ~~ (M \to \infty)
-        \end{align}
-        が成り立つ．
-      \end{thm}
+        \begin{dfn}
+          (Arc-Cosine kernel)
+          任意の2つのベクトル${\bf x}, {\bf x}' \in \mathcal{X} \subset \mathbb{R}^{N}$に対して，
+          \begin{align}
+            \theta &= {\cos}^{-1} \left( \frac{{\bf x}^{\mathrm{T}} {\bf x}'}{ \|{\bf x}\| \|{\bf x}'\| } \right) \\
+            J(\theta) &= \sin \theta + (\pi - \theta) \cos \theta
+          \end{align}
+          とおき，Arc-Cosineカーネル
+          \begin{align}
+            k^{(1)}({\bf x}, {\bf x}') = \frac{1}{\pi} \| {\bf x} \| \| {\bf x}' \| J(\theta) 
+          \end{align}
+          を定義する．
+        \end{dfn}
 
-      \begin{thm}\label{thm:semi_positive}
-        $\mathcal{X} \times \mathcal{X}$上の関数
-        \begin{align}
-          k^{(1)}({\bf x},{\bf x}') = \frac{1}{\pi} \| {\bf x} \| \| {\bf x}' \| J(\theta) \label{form:dnn_kernel}
-        \end{align}
-        は半正定値関数である．
-      \end{thm}
+        \begin{thm}\label{thm:clt_dnn}
+          各要素$w_{ij}$がi.i.d.で，平均が$0$，分散が$\sigma_w^2$となるランダム行列${\bf W} \in \mathbb{R}^{M \times N}$を考える．
+          活性化関数としてReLU関数$\phi$を用いて，1層のニューラルネットワークに相当する関数$f_i:\mathbb{R}^{N} \to \mathbb{R}$:
+          \begin{align}
+            f_i({\bf x}) = \phi({\bf w}_i^{\mathrm{T}} {\bf x}), ~~~ (i=1 ,\dots, M)
+          \end{align}
+          を考える．このとき任意の${\bf x}, {\bf x}' \in \mathbb{R}^{N}$に対して，
+          \begin{align}
+            E \left[ \frac{1}{M} \sum_{i=1}^{M} f_i({\bf x}) f_i({\bf x}') \right] \to
+            \frac{1}{\sigma_w^N} k^{(1)}({\bf x}, {\bf x}') ~~ (M \to \infty)
+          \end{align}
+          が成り立つ．
+        \end{thm}
 
-      \begin{thm}\label{thm:kernel_matrix_positive}
-        (カーネル関数存在定理)
-        任意の対称行列$K \in \mathbb{R}^{n \times n} $が半正定値ならば，
-        データ空間$\mathcal{X}$上の$n$点${ \{ {\bf x}_i \} }_{i=1}^{n}$と，
-        特徴空間$\mathcal{F} \subset \mathbb{R}^{n}$上の$n$次元特徴ベクトル${ \{ f({\bf x}_i) \} }_{i=1}^{n}$がそれぞれ存在して，
-        \begin{align}
-          K_{ij} = {\langle f({\bf x}_i), f({\bf x}_j) \rangle}_{\mathcal{F}} = \sum_{k=1}^{n} {f({\bf x}_i)}_k {f({\bf x}_j)}_k 
-        \end{align}
-        が成り立つ．さらに，$k({\bf x}_i, {\bf x}_j) = K_{ij}$とおけば，半正定値関数$k: \mathcal{X} \times \mathcal{X} \to \mathbb{R}$が定義される．
-      \end{thm}
+        \begin{thm}\label{thm:semi_positive}
+          $\mathcal{X} \times \mathcal{X}$上の関数
+          \begin{align}
+            k^{(1)}({\bf x},{\bf x}') = \frac{1}{\pi} \| {\bf x} \| \| {\bf x}' \| J(\theta) \label{form:dnn_kernel}
+          \end{align}
+          は半正定値関数である．
+        \end{thm}
 
-      定理\ref{thm:kernel_matrix_positive}から，カーネル関数$k: \mathcal{X} \times \mathcal{X} \to \mathbb{R}$を定義せずとも，
-      与えられたデータサンプルから構成された半正定値対称行列を作ることで，それが何らかのカーネル関数によるグラム行列に相当することが保証される．
-      よって，定理\ref{thm:clt_dnn}と定理\ref{thm:semi_positive}より，式(\ref{form:dnn_kernel})を共分散関数にもつガウス過程が
-      1層のNeuralNetworkの近似となることがわかる．
+        \begin{thm}\label{thm:kernel_matrix_positive}
+          (カーネル関数存在定理)
+          任意の対称行列$K \in \mathbb{R}^{n \times n} $が半正定値ならば，
+          データ空間$\mathcal{X}$上の$n$点${ \{ {\bf x}_i \} }_{i=1}^{n}$と，
+          特徴空間$\mathcal{F} \subset \mathbb{R}^{n}$上の$n$次元特徴ベクトル${ \{ f({\bf x}_i) \} }_{i=1}^{n}$がそれぞれ存在して，
+          \begin{align}
+            K_{ij} = {\langle f({\bf x}_i), f({\bf x}_j) \rangle}_{\mathcal{F}} = \sum_{k=1}^{n} {f({\bf x}_i)}_k {f({\bf x}_j)}_k 
+          \end{align}
+          が成り立つ．さらに，$k({\bf x}_i, {\bf x}_j) = K_{ij}$とおけば，半正定値関数$k: \mathcal{X} \times \mathcal{X} \to \mathbb{R}$が定義される．
+        \end{thm}
+
+        定理\ref{thm:kernel_matrix_positive}から，カーネル関数$k: \mathcal{X} \times \mathcal{X} \to \mathbb{R}$を定義せずとも，
+        与えられたデータサンプルから構成された半正定値対称行列を作ることで，それが何らかのカーネル関数によるグラム行列に相当することが保証される．
+        よって，定理\ref{thm:clt_dnn}と定理\ref{thm:semi_positive}より，式(\ref{form:dnn_kernel})を共分散関数にもつガウス過程が
+        1層のNeuralNetworkの近似となることがわかる．
 
     \subsection{多層のFeed Forward Neural Network}
       1層のFeed Forward Neural Networkに関する議論は，正定値カーネルの線形性より，容易に多層へと拡張することができる．
@@ -383,18 +411,31 @@
 
   \section{Kernel Variational AutoEncoder}
     前章での議論から，GP-LVMにおける潜在変数$X$と観測関数$Y$に対する確率モデル$p(Y|X)$を，
-    多層のFeed Forward Neural Networkに相当する関数
+    多層のFeed Forward Neural Networkに相当するモデル
     \begin{align}
-      f({\bf x}) = \phi( {\bf w}^{\mathrm{T}} {\bf x})
+      y = f^{(l)} ({\bf x}) = \phi( {{\bf w}^{(l)}}^{\mathrm{T}} \phi( {\bf W}^{(l-1)}  \dots \phi( {\bf W}^{(1)} {\bf x}) ) )
     \end{align}
-    によって表現することを考える．
+    によって表現することを考える．すなわち，
+    \begin{align}
+      k^{(l)}( {\bf x}, {\bf x}' ) = { \langle f^{(l)} ({\bf x}), f^{(l)} ({\bf x}') \rangle }_{\mathcal{F}^{(l)}}
+    \end{align}
+    に対応するガウス過程
+    \begin{align}
+      f^{(l)}(\cdot) \sim \mathcal{GP}(0, k^{(l)}(\cdot,\cdot))
+    \end{align}
+    を考える．
 
+    \subsection{変分推論}
 
   \section{Experiments}
   \section{Conclusion}
+    文献\cite{Hinton1995BayesianLF}
+    \cite{DLGP2018} \cite{KMDL2009} \cite{LawrenceGPLVM2004} \cite{LawrenceGPLVM2005}
+    \cite{SparseGP2006} \cite{VariationalSparseGP2009} \cite{BayesGP2010}
+    \cite{GPBIGDATA2013}
 
-  % \bibliography{ref} %hoge.bibから拡張子を外した名前
-  % \bibliographystyle{junsrt} %参考文献出力スタイル
 
+  \bibliography{ref} %hoge.bibから拡張子を外した名前
+  \bibliographystyle{junsrt} %参考文献出力スタイル
+  
 \end{document}
-
