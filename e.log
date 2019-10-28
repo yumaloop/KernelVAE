@@ -1,0 +1,29 @@
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2019.3.3)  28 OCT 2019 15:45
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/e.tex
+! Interruption.
+<to be read again> 
+                   \begingroup 
+l.1 
+    %%
+? 
+! Emergency stop.
+<to be read again> 
+                   \begingroup 
+l.1 
+    %%
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 9 strings out of 493281
+ 177 string characters out of 6145042
+ 60763 words of memory out of 5000000
+ 4035 multiletter control sequences out of 15000+600000
+ 7511 words of font info for 31 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 3i,0n,1p,13b,6s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.

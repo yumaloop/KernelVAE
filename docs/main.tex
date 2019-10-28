@@ -223,11 +223,17 @@
           \begin{align}
             \hat{\bf X}^{n}_{ML} &= \underset{{\bf X}^n}{\rm argmax} ~ \log p( {\bf Y}^n | {\bf X}^n) \\
           \end{align}
+          対数尤度の${\bf \Sigma}_{nn}$に対する勾配は，次のように計算される．
+          \begin{align}
+            \frac{\partial \log p({\bf Y}^n|{\bf X}^n)}{\partial {\bf \Sigma}_{nn}} &= {\bf \Sigma}_{nn}^{-1} {\bf Y}{\bf Y}^{\mathrm{T}} {\bf \Sigma}_{nn}^{-1} - D {\bf \Sigma}_{nn}^{-1} 
+          \end{align}
+          よって，対数尤度の${\bf X}^n$に対する勾配$\partial \log p({\bf Y}^n|{\bf X}^n) / \partial {\bf X}^n$は，
+          $\partial {\bf \Sigma}_{nn} / \partial {\bf X}^n = \partial {\bf K}_{nn} / \partial {\bf X}^n$と連鎖律を用いて計算される．
 
         \paragraph{MAP推定}
-          $X^n$の事前分布として，
+          ${\bf X}^n$の事前分布として，
           \begin{align}
-            p(X^n) 
+            p({\bf X}^n) 
             &= \prod_{q=1}^{Q} p({\bf x}_q) = \prod_{q=1}^{Q} \mathcal{N}({\bf x}_q | {\bf 0}, \sigma_x^2 I_N) \\
             &= \prod_{q=1}^{Q} \frac{1}{{(2 \pi {\sigma_x^2} )}^{\frac{n}{2}}} \exp \left( - \frac{ {\bf x}_q^{\mathrm{T}} {\bf x}_q }{2 \sigma_x^2} \right) \\
             &= \frac{1}{{(2 \pi {\sigma_x^2} )}^{\frac{QN}{2}}} \exp \left( -\frac{1}{2 \sigma_x^2} {\rm tr} ({{\bf X}^n}{{\bf X}^n}^{\mathrm{T}}) \right) \\

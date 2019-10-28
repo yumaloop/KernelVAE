@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1572244989 "/Users/uchiumi/workspace/KernelVAE/docs/main.tex" "/Users/uchiumi/workspace/KernelVAE/docs/main.pdf" "main" 1572244989
-  "/Users/uchiumi/workspace/KernelVAE/docs/main.aux" 1572244989 8 a94a2480d3289e625eea47cd1b285758 ""
-  "/Users/uchiumi/workspace/KernelVAE/docs/main.tex" 1572244988 26349 87e00f1d3fd274dc0ea691adec920d02 ""
+["pdflatex"] 1572253490 "/Users/uchiumi/workspace/KernelVAE/docs/main.tex" "/Users/uchiumi/workspace/KernelVAE/docs/main.pdf" "main" 1572253490
+  "/Users/uchiumi/workspace/KernelVAE/docs/main.aux" 1572253490 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/Users/uchiumi/workspace/KernelVAE/docs/main.tex" 1572253489 26977 0372413f26819746fd681c0994fd739c ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1480098698 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1480098698 1120 200be8b775682cdf80acad4be5ef57e4 ""
@@ -62,12 +62,12 @@
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1551622785 4220279 7f4633b5e891e2cedf9d79a96c9131fa ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "main.aux" 0 -1 0 ""
-  "main.tex" 1572244988 26349 87e00f1d3fd274dc0ea691adec920d02 ""
+  "main.tex" 1572253489 26977 0372413f26819746fd681c0994fd739c ""
   "main.toc" 0 -1 0 ""
   (generated)
-  "main.toc"
   "main.log"
-  "/Users/uchiumi/workspace/KernelVAE/docs/main.log"
   "/Users/uchiumi/workspace/KernelVAE/docs/main.pdf"
   "main.pdf"
+  "/Users/uchiumi/workspace/KernelVAE/docs/main.log"
+  "main.toc"
   "main.aux"
