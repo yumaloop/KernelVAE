@@ -286,9 +286,69 @@
         実際，任意の入力${\bf x}, {\bf x}' \in \mathcal{X}$に対して，
         \begin{align}
           k( {\bf x}, {\bf x}' ) 
-          &= Cov[z_i({\bf x}), z_i({\bf x}')] \\ 
-          &= E[z_i({\bf x}) z_i({\bf x}')] \\
-          &= \sigma_w^2 E[ x_i {x'}_i ] 
+          &= Cov[z_i({\bf x}), z_i({\bf x}')] = E_w[z_i({\bf x}) z_i({\bf x}')] \\
+          &= E_w \left[ \left( \sum_{j=1}^{N} w_{ij} x_j \right) \left( \sum_{j=1}^{N} w_{ij} {x'}_j \right) \right] \\
+          &= E_w \left[ \sum_{j=1}^{N} \sum_{k=1}^{N} w_{ij} w_{ik} x_j {x'}_k \right] \\
+          &= \sum_{j=1}^{N} \sum_{k=1}^{N} E_w [ w^2 ]  x_j {x'}_k \\
+          &= \sigma_w^2 \sum_{j=1}^{N} \sum_{k=1}^{N} x_j {x'}_k \\
+        \end{align}
+        となり．さらに，任意の${\bf x} = {(x_1, \dots, x_N)}^{\mathrm{T}} \in \mathcal{X}$に対して，
+        \begin{align}
+          x_j ~~ i.i.d. \sim p_x(\cdot), ~~~ E[x_j] = 0, ~~~ (i=1, \dots, N)
+        \end{align}
+        を仮定すると，
+        \begin{align}
+          E_{{\bf x}, {\bf x}'} [ k( {\bf x}, {\bf x}' ) ]
+          = \sigma_w^2 \sum_{j=1}^{N} E[x_j {x'}_j]
+          = \sigma_w^2 E[ {\bf x}^{\mathrm{T}} {\bf x}' ] 
+        \end{align}
+        となることに注意する．
+
+      \subsubsection{多層のNeural Network}
+        活性化関数$\phi$をもち$L$層からなるFeed Forward Neural Networkを考え，$l=1, \dots, L$に対して，第$l$層の活性化前の状態を${\bf z}^{(l)}$，ノード数を$N^{(l)}$とそれぞれおき，上の議論を多層に拡張する．
+        すなわち，第$l$層の任意のノード値$z_i^{(l)}(\cdot)$に対して，ガウス過程
+        \begin{align}
+          z_i^{(l)}(\cdot) \sim \mathcal{GP}(0, k^{(l)}(\cdot,\cdot))
+        \end{align}
+        を仮定し，任意の入力${\bf x}, {\bf x}' \in \mathcal{X}$に対して，この分散関数$k^{(l)}$を特定すればよい（図\ref{fig:dnn_gp}参照）．
+        \begin{figure}[htbp]
+          % figure 1
+          \begin{center}
+            \includegraphics[width=12.0cm]{./figures/dnn_gp.eps}
+            \caption{ガウス過程とDNN}
+            \label{fig:dnn_gp}
+          \end{center}
+        \end{figure}
+        上の議論から，任意の第$l$層に対して，カーネル関数$k^{(l)}$は次のように計算される．
+        \begin{align}
+          k^{(l)}({\bf x},{\bf x}') 
+          &= Cov[ z_i^{(l)}({\bf x}), z_i^{(l)}({\bf x}')] \\
+          &= E_w [z_i^{(l)}({\bf x}) z_i^{(l)}({\bf x}') ] \\
+          &= E_w \left[ \left( \sum_{j=1}^{N^{(l-1)}} w_{ij} \phi(z_j^{(l-1)}({\bf x})) \right) \left( \sum_{j=1}^{N^{(l-1)}} w_{ij} \phi(z_j^{(l-1)}({\bf x}')) \right) \right] \\
+          &= E_w \left[ \sum_{j=1}^{N^{(l-1)}} \sum_{k=1}^{N^{(l-1)}} w_{ij} w_{ik} \phi(z_j^{(l-1)}({\bf x})) \phi(z_k^{(l-1)}({\bf x}')) \right] \\
+          &= \sum_{j=1}^{N^{(l-1)}} \sum_{k=1}^{N^{(l-1)}} E_w [w^2] \phi(z_j^{(l-1)}({\bf x})) \phi(z_k^{(l-1)}({\bf x}')) \\
+          &= \sigma_w^2 \sum_{j=1}^{N^{(l-1)}} \sum_{k=1}^{N^{(l-1)}} \phi(z_j^{(l-1)}({\bf x})) \phi(z_k^{(l-1)}({\bf x}')) ~~~ ( l \geq 2 ) \\
+          \\
+          k^{(1)}({\bf x},{\bf x}') 
+          &= Cov[ z_i^{(1)}({\bf x}), z_i^{(1)}({\bf x}')] \\
+          &= E_w[z_i^{(1)}({\bf x}) z_i^{(1)}({\bf x}') ] \\
+          &= \sigma_w^2 \sum_{j=1}^{N^{(1)}} \sum_{k=1}^{N^{(1)}} x_j {x'}_k 
+        \end{align}
+        さらに，任意の${\bf z}^{(l)} = {(z^{(l)}({\bf x}_1), \dots, z^{(l)}({\bf x}_N))}^{\mathrm{T} } \in \mathbb{R}^{N} $に対して，
+        \begin{align}
+          z^{(l)}({\bf x}_i) ~~ i.i.d. \sim p_z(\cdot), ~~~ E[z^{(l)}({\bf x}_i)] = 0, ~~~ (i=1, \dots, N)
+        \end{align}
+        を仮定すると，
+        \begin{align}
+          \phi ( z^{(l)}({\bf x}_i) ) ~~ i.i.d. \sim p_{\phi(z)}(\cdot), ~~~ E[\phi( z^{(l)}({\bf x}_i) )] = 0, ~~~ (i=1, \dots, N)
+        \end{align}
+        だから，
+        \begin{align}
+           & E_{{\bf x},{\bf x}'} \left[ k^{(l)}({\bf x},{\bf x}') \right] \\
+          =& E_{{\bf x},{\bf x}'} \left[ \sigma_w^2 \sum_{j=1}^{N^{(l-1)}} \sum_{k=1}^{N^{(l-1)}} \phi(z_j^{(l-1)}({\bf x})) \phi(z_k^{(l-1)}({\bf x}')) \right] \\
+          =& \sigma_w^2 E_{{\bf z}^{(l-1)}} \left[ \sum_{j=1}^{N^{(l-1)}} \sum_{k=1}^{N^{(l-1)}} \phi(z_j^{(l-1)}) \phi(z_k^{(l-1)}) \right] \\
+          =& \sigma_w^2 \sum_{i=1}^{N^{(l-1)}} E_{z_i^{(l-1)} \sim \mathcal{GP}(0, k^{(l-1)})} \left[ \phi^2( z_i^{(l-1)} )  \right] \\
+          =& \sigma_w^2 N^{(l-1)} E_{z_i^{(l-1)} \sim \mathcal{GP}(0, k^{(l-1)})} \left[ \phi^2( z_i^{(l-1)} ) \right] 
         \end{align}
         となることに注意する．
 
@@ -298,7 +358,7 @@
           y_i = f_i({\bf x}) = \phi( {{\bf w}_i}^{\mathrm{T}} {\bf x} )
         \end{align}
         ここで，関数$f_i$に対する内積${f_i(\cdot)}^{\mathrm{T}} f_i(\cdot): {\bf x} \times {\bf x}' \mapsto \mathbb{R}$を考える．
-        活性化関数$\phi$としてReLUを仮定して，対応する指示関数
+        活性化関数$\phi$としてReLUを仮定して，対応する指示 関数
         \begin{align}
           {\mathrm{I}}(x) = 
           \begin{cases}
