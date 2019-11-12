@@ -1,24 +1,6 @@
-# Copyright 2018 Google LLC
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     https://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 """
 Neural Network Gaussian Process (nngp) kernel computation.
-
-Implementaion based on
-"Deep Neural Networks as Gaussian Processes" by
-Jaehoon Lee, Yasaman Bahri, Roman Novak, Samuel S. Schoenholz,
-Jeffrey Pennington, Jascha Sohl-Dickstein
+Implementaion based on "Deep Neural Networks as Gaussian Processes" 
 arXiv:1711.00165 (https://arxiv.org/abs/1711.00165).
 """
 from __future__ import absolute_import
@@ -40,24 +22,45 @@ flags.DEFINE_integer(
     32,
     "allow batches at most of size int32.max / fraction_of_int32",
 )
+flags.DEFINE_string(
+    'f', 
+    '', 
+    'kernel'
+)
+
+
+class RBFKernel(object):
+    def __init__(self):
+        pass
+
+    def k_full(self, input1, input2=None):
+        pass
+
 
 
 class NNGPKernel(object):
     """The iterative covariance Kernel for Neural Network Gaussian Process.
-
-  Args:
-    depth: int, number of hidden layers in corresponding NN.
-    nonlin_fn: tf ops corresponding to point-wise non-linearity in corresponding
-      NN. e.g.) tf.nn.relu, tf.nn.sigmoid, lambda x: x * tf.nn.sigmoid(x), ...
-    weight_var: initial value for the weight_variances parameter.
-    bias_var: initial value for the bias_variance parameter.
-    n_gauss: Number of gaussian integration grid. Choose odd integer, so that
-      there is a gridpoint at 0.
-    n_var: Number of variance grid points.
-    n_corr: Number of correlation grid points.
-    use_fixed_point_norm: bool, normalize input to variance fixed point.
-      Defaults to False, normalizing input to unit norm over input dimension.
-  """
+      Args:
+        depth: int
+            number of hidden layers in corresponding NN.
+        nonlin_fn: tf ops 
+            ops corresponding to point-wise non-linearity in corresponding NN. 
+            e.g.) tf.nn.relu, tf.nn.sigmoid, lambda x: x * tf.nn.sigmoid(x), ...
+        weight_var: float
+            initial value for the weight_variances parameter.
+        bias_var: float
+            initial value for the bias_variance parameter.
+        n_gauss: int
+            Number of gaussian integration grid. 
+            Choose odd integer, so that there is a gridpoint at 0.
+        n_var: int
+            Number of variance grid points.
+        n_corr: int
+            Number of correlation grid points.
+        use_fixed_point_norm: bool
+            normalize input to variance fixed point.
+            Defaults to False, normalizing input to unit norm over input dimension.
+      """
 
     def __init__(
         self,
@@ -220,8 +223,10 @@ class NNGPKernel(object):
             return qaa
 
     def k_full(self, input1, input2=None):
-        """Iteratively building the full NNGP kernel.
-    """
+        """
+        Iteratively building the full NNGP kernel.
+        return gram matrix (n x n).
+        """
         input1 = self._input_layer_normalization(input1)
         if input2 is None:
             input2 = input1

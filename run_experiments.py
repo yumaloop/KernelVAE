@@ -44,24 +44,22 @@ flags.DEFINE_string(
     "Comma separated list of name=value hyperparameter pairs to override the default setting.",
 )
 flags.DEFINE_string(
-    "experiment_dir", "/tmp/nngp", "Directory to put the experiment results."
+    "experiment_dir", 
+    "/tmp/nngp", 
+    "Directory to put the experiment results."
 )
 flags.DEFINE_string(
-    "grid_path", "./grid_data", "Directory to put or find the training data."
+    "grid_path",
+    "./grid_data",
+    "Directory to put or find the training data."
 )
 flags.DEFINE_integer("num_train", 1000, "Number of training data.")
-flags.DEFINE_integer(
-    "num_eval", 1000, "Number of evaluation data. Use 10_000 for full eval"
-)
+flags.DEFINE_integer("num_eval", 1000, "Number of evaluation data. Use 10_000 for full eval")
 flags.DEFINE_integer("seed", 1234, "Random number seed for data shuffling")
 flags.DEFINE_boolean("save_kernel", False, "Save Kernel do disk")
 flags.DEFINE_string("dataset", "mnist", 'Which dataset to use ["mnist"]')
-flags.DEFINE_boolean(
-    "use_fixed_point_norm", False, "Normalize input variance to fixed point variance"
-)
-flags.DEFINE_integer(
-    "n_gauss", 501, "Number of gaussian integration grid. Choose odd integer."
-)
+flags.DEFINE_boolean("use_fixed_point_norm", False, "Normalize input variance to fixed point variance")
+flags.DEFINE_integer("n_gauss", 501, "Number of gaussian integration grid. Choose odd integer.")
 flags.DEFINE_integer("n_var", 501, "Number of variance grid points.")
 flags.DEFINE_integer("n_corr", 500, "Number of correlation grid points.")
 flags.DEFINE_integer("max_var", 100, "Max value for variance grid.")
