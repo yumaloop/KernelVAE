@@ -44,7 +44,7 @@
         &\Rightarrow \sum_{i=1}^{n} a_i X_i + b_i \sim \mathcal{N} \left( \sum_{i=1}^{n} a_i \mu_i + b_i, \sum_{i=1}^{n} a_i^2 \sigma_i^2 \right)
       \end{align}
 
-    \paragraph{条件つき分布の計算}
+      \paragraph{条件つき分布の計算}
       任意の2つのベクトル${\bf f}_n \in \mathbb{R}^{n}, {\bf f}_m \in \mathbb{R}^{m}$に対して，
       \begin{align}
         \left(
@@ -64,7 +64,7 @@
           \begin{bmatrix}
             \Sigma_{nn} & \Sigma_{nm} \\
             \Sigma_{nm}^{\mathrm{T}} & \Sigma_{mm}
-          \end{bmatrix}
+          \end{bmatrix}o
         \right)
       \end{align}
       ならば，次が成り立つ．
@@ -219,16 +219,21 @@
             \log p({\bf Y}^n|{\bf X}^n)
             &= -\frac{Dn}{2} \log (2 \pi) - \frac{D}{2} \log |{\bf \Sigma}_{nn}| - \frac{1}{2} {\rm tr} ({\bf \Sigma}_{nn}^{-1} {{\bf Y}^n}{{\bf Y}^n}^{\mathrm{T}})
           \end{align}
-          となるから，これを目的関数として最大化すれば，${\bf X}^n$の最尤推定量は，次のように求められる．
+          となるから，観測値によって固定された${\bf Y}^n$の下で，これを目的関数として最大化すれば，${\bf X}^n$の最尤推定量$\hat{\bf X}^{n}_{ML}$が求められる．
           \begin{align}
-            \hat{\bf X}^{n}_{ML} &= \underset{{\bf X}^n}{\rm argmax} ~ \log p( {\bf Y}^n | {\bf X}^n) \\
+            \hat{\bf X}^{n}_{ML} &= \underset{{\bf X}^n}{\rm argmax} ~ \log p( {\bf Y}^n | {\bf X}^n) 
           \end{align}
+          ここで，対数尤度において${\bf X}^n$に依存する変数は${\bf \Sigma}_{nn}$のみであることに注意する．
           対数尤度の${\bf \Sigma}_{nn}$に対する勾配は，次のように計算される．
           \begin{align}
             \frac{\partial \log p({\bf Y}^n|{\bf X}^n)}{\partial {\bf \Sigma}_{nn}} &= {\bf \Sigma}_{nn}^{-1} {\bf Y}{\bf Y}^{\mathrm{T}} {\bf \Sigma}_{nn}^{-1} - D {\bf \Sigma}_{nn}^{-1} 
           \end{align}
           よって，対数尤度の${\bf X}^n$に対する勾配$\partial \log p({\bf Y}^n|{\bf X}^n) / \partial {\bf X}^n$は，
           $\partial {\bf \Sigma}_{nn} / \partial {\bf X}^n = \partial {\bf K}_{nn} / \partial {\bf X}^n$と連鎖律を用いて計算される．
+          \begin{align}
+            \frac{\partial \log p({\bf Y}^n | {\bf X}^n) }{ \partial {\bf X}^n } &= \frac{\partial \log p({\bf Y}^n | {\bf X}^n) }{\partial {\bf \Sigma}_{nn} } \frac{\partial {\bf \Sigma}_{nn}}{\partial {\bf X}^n} \\
+            &= \left( {\bf \Sigma}_{nn}^{-1} {\bf Y}{\bf Y}^{\mathrm{T}} {\bf \Sigma}_{nn}^{-1} - D {\bf \Sigma}_{nn}^{-1} \right) \frac{\partial {\bf K}_{nn} }{\partial {\bf X}^n }
+          \end{align}
 
         \paragraph{MAP推定}
           ${\bf X}^n$の事前分布として，
@@ -255,8 +260,8 @@
           \end{align}
 
   \section{Deep Neural Networkのカーネル法による近似}
-    \subsection{1層のFeed Forward Neural Network}
-      \subsubsection{線形写像に対応するガウス過程}
+    \subsection{線形写像に対応するガウス過程}
+      \subsubsection{1層のFeed Forward Neural Network}
         ニューラルネットワークの全結合層や畳み込み層における推論計算は，線形写像と非線形の活性化関数の組み合わせによって構成される．
         ここで，ある層の入力ベクトルを${\bf x} \in \mathcal{X} \subseteq \mathbb{R}^{N}$，
         出力ベクトルを${\bf y} \in \mathcal{Y} \subseteq \mathbb{R}^{M}$，
@@ -304,7 +309,7 @@
         \end{align}
         となることに注意する．
 
-      \subsubsection{多層のNeural Network}
+      \subsubsection{多層のFeed Forward Neural Network}
         活性化関数$\phi$をもち$L$層からなるFeed Forward Neural Networkを考え，$l=1, \dots, L$に対して，第$l$層の活性化前の状態を${\bf z}^{(l)}$，ノード数を$N^{(l)}$とそれぞれおき，上の議論を多層に拡張する．
         すなわち，第$l$層の任意のノード値$z_i^{(l)}(\cdot)$に対して，ガウス過程
         \begin{align}
@@ -346,12 +351,13 @@
         \begin{align}
            & E_{{\bf x},{\bf x}'} \left[ k^{(l)}({\bf x},{\bf x}') \right] \\
           =& E_{{\bf x},{\bf x}'} \left[ \sigma_w^2 \sum_{j=1}^{N^{(l-1)}} \sum_{k=1}^{N^{(l-1)}} \phi(z_j^{(l-1)}({\bf x})) \phi(z_k^{(l-1)}({\bf x}')) \right] \\
-          =& \sigma_w^2 E_{{\bf z}^{(l-1)}} \left[ \sum_{j=1}^{N^{(l-1)}} \sum_{k=1}^{N^{(l-1)}} \phi(z_j^{(l-1)}) \phi(z_k^{(l-1)}) \right] \\
-          =& \sigma_w^2 \sum_{i=1}^{N^{(l-1)}} E_{z_i^{(l-1)} \sim \mathcal{GP}(0, k^{(l-1)})} \left[ \phi^2( z_i^{(l-1)} )  \right] \\
-          =& \sigma_w^2 N^{(l-1)} E_{z_i^{(l-1)} \sim \mathcal{GP}(0, k^{(l-1)})} \left[ \phi^2( z_i^{(l-1)} ) \right] 
+          =& \sigma_w^2 E_{{\bf z}^{(l-1)},{{\bf z}'}^{(l-1)}} \left[ \sum_{j=1}^{N^{(l-1)}} \phi(z_i^{(l-1)}) \phi({z'}_i^{(l-1)}) \right] \\
+          =& \sigma_w^2 E_{{\bf z}^{(l-1)},{{\bf z}'}^{(l-1)}} \left[ {{\boldsymbol \phi}({\bf z}^{(l-1)})}^{\mathrm{T}} {\boldsymbol \phi}({{\bf z}'}^{(l-1)}) \right] \\
+          =& \sigma_w^2 N^{(l-1)} E_{z^{(l-1)},{z'}^{(l-1)} \sim \mathcal{GP}(0, k^{(l-1)})} \left[ \phi(z^{(l-1)}) \phi({z'}^{(l-1)})  \right] 
         \end{align}
         となることに注意する．
 
+    \subsection{カーネル法}
       \subsubsection{正定値カーネルによる近似}
         式(\ref{form:nn_inference})の推論処理をまとめて関数$f_i:\mathbb{R}^{N} \to \mathbb{R}$とおく．
         \begin{align}
@@ -444,36 +450,36 @@
         よって，定理\ref{thm:clt_dnn}と定理\ref{thm:semi_positive}より，式(\ref{form:dnn_kernel})を共分散関数にもつガウス過程が
         1層のNeuralNetworkの近似となることがわかる．
 
-    \subsection{多層のFeed Forward Neural Network}
-      1層のFeed Forward Neural Networkに関する議論は，正定値カーネルの線形性より，容易に多層へと拡張することができる．
-      一般性を失うことなく，$L > 0$層からなるFeed Forward Neural Networkを考え，各層の線形写像に対応する重み行列${\bf W}^{(l)}$に対して，固定された$\sigma^2_w$を与えて，
-      \begin{align}
-        \forall l \in [1, L] \subset \mathbb{N}, ~~~ {\bf W}^{(l)}_{ij} \sim i.i.d. ~ \mathcal{N}(0, \sigma^2_w)
-      \end{align}
-      を仮定する．
-      第$l$層のユニット数を$N^{(l)}$，第$l$層の空間を$\mathcal{T}^{(l)}$，第$l$層の出力を得る関数を$f^{(l)}: \mathcal{X} \to \mathcal{T}^{(l)}$とおく．
-      任意の入力データ${\bf x}, {\bf x}' \in \mathcal{X}$に対して，Neural Networkの第$l$層に対応する共分散関数$k^{(l)}: \mathcal{T}^{(l)} \times \mathcal{T}^{(l)} \to \mathbb{R}$は，次の漸化式で求められる．
-      \begin{align}
-        k^{(1)}({\bf x}, {\bf x}') &= Cov \left[ f^{(1)}({\bf x}), f^{(1)}({\bf x}') \right] \nonumber \\
-                                   &= Cov \left[ \phi({\bf W}^{(1)} {\bf x}), \phi({\bf W}^{(1)} {\bf x}') \right] \nonumber \\ 
-                                   &= \frac{1}{\pi \sigma_w^{N^{(1)}}} \| {\bf x} \| \| {\bf x}' \| J(\theta^{(0)}) \\
-        k^{(l+1)}({\bf x}, {\bf x}') &= Cov \left[ f^{(l+1)}({\bf x}), f^{(l+1)}({\bf x}') \right] \nonumber \\
-                                     &= Cov \left[ \phi( {\bf W}^{(l+1)} \cdots \phi( {\bf W}^{(1)} {\bf x} )), \phi( {\bf W}^{(l+1)} \cdots \phi( {\bf W}^{(1)} {\bf x}' )) \right] \nonumber \\ 
-                                     &= \frac{1}{ \pi \sigma_{w}^{ N^{(l+1)}}} \sqrt{ k^{(l)}({\bf x}, {\bf x}) } \sqrt{ k^{(l)}({\bf x}', {\bf x}') } J(\theta^{(l)})
-      \end{align}
-      ただし，
-      \begin{align}
-        J(\theta^{(l)}) &= \sin \theta^{(l)} + (\pi - \theta^{(l)}) \cos \theta^{(l)} \\
-        \theta^{(l)} &=
-        \begin{cases}
-          \cos^{-1} \left( \frac{{\bf x}^{\mathrm{T}} {\bf x}'}{ \|{\bf x}\| \|{\bf x}'\| } \right) ~~~ (l = 0) \\
-          \cos^{-1} \left( \frac{k^{(l)}( {\bf x}, {\bf x}' )}{ \sqrt{ k^{(l)}({\bf x}, {\bf x}) } \sqrt{ k^{(l)}({\bf x}', {\bf x}') } } \right) ~~~ (l \neq 0) 
-        \end{cases}
-      \end{align}
-      とする．以上の結果から，入力から第$l$層の各ユニットの出力値を得る関数$f^{(l)}_i: \mathcal{X} \to \mathbb{R}$は以下のガウス過程で近似できる．
-      \begin{align}
-        f^{(l)}_i(\cdot) \sim \mathcal{GP}( 0, k^{(l)}(\cdot,\cdot) ), ~~~ (i=1,\dots,N^{(l)})
-      \end{align}
+      \subsubsection{多層のFeed Forward Neural Network}
+        1層のFeed Forward Neural Networkに関する議論は，正定値カーネルの線形性より，容易に多層へと拡張することができる．
+        一般性を失うことなく，$L > 0$層からなるFeed Forward Neural Networkを考え，各層の線形写像に対応する重み行列${\bf W}^{(l)}$に対して，固定された$\sigma^2_w$を与えて，
+        \begin{align}
+          \forall l \in [1, L] \subset \mathbb{N}, ~~~ {\bf W}^{(l)}_{ij} \sim i.i.d. ~ \mathcal{N}(0, \sigma^2_w)
+        \end{align}
+        を仮定する．
+        第$l$層のユニット数を$N^{(l)}$，第$l$層の空間を$\mathcal{T}^{(l)}$，第$l$層の出力を得る関数を$f^{(l)}: \mathcal{X} \to \mathcal{T}^{(l)}$とおく．
+        任意の入力データ${\bf x}, {\bf x}' \in \mathcal{X}$に対して，Neural Networkの第$l$層に対応する共分散関数$k^{(l)}: \mathcal{T}^{(l)} \times \mathcal{T}^{(l)} \to \mathbb{R}$は，次の漸化式で求められる．
+        \begin{align}
+          k^{(1)}({\bf x}, {\bf x}') &= Cov \left[ f^{(1)}({\bf x}), f^{(1)}({\bf x}') \right] \nonumber \\
+                                    &= Cov \left[ \phi({\bf W}^{(1)} {\bf x}), \phi({\bf W}^{(1)} {\bf x}') \right] \nonumber \\ 
+                                    &= \frac{1}{\pi \sigma_w^{N^{(1)}}} \| {\bf x} \| \| {\bf x}' \| J(\theta^{(0)}) \\
+          k^{(l+1)}({\bf x}, {\bf x}') &= Cov \left[ f^{(l+1)}({\bf x}), f^{(l+1)}({\bf x}') \right] \nonumber \\
+                                      &= Cov \left[ \phi( {\bf W}^{(l+1)} \cdots \phi( {\bf W}^{(1)} {\bf x} )), \phi( {\bf W}^{(l+1)} \cdots \phi( {\bf W}^{(1)} {\bf x}' )) \right] \nonumber \\ 
+                                      &= \frac{1}{ \pi \sigma_{w}^{ N^{(l+1)}}} \sqrt{ k^{(l)}({\bf x}, {\bf x}) } \sqrt{ k^{(l)}({\bf x}', {\bf x}') } J(\theta^{(l)})
+        \end{align}
+        ただし，
+        \begin{align}
+          J(\theta^{(l)}) &= \sin \theta^{(l)} + (\pi - \theta^{(l)}) \cos \theta^{(l)} \\
+          \theta^{(l)} &=
+          \begin{cases}
+            \cos^{-1} \left( \frac{{\bf x}^{\mathrm{T}} {\bf x}'}{ \|{\bf x}\| \|{\bf x}'\| } \right) ~~~ (l = 0) \\
+            \cos^{-1} \left( \frac{k^{(l)}( {\bf x}, {\bf x}' )}{ \sqrt{ k^{(l)}({\bf x}, {\bf x}) } \sqrt{ k^{(l)}({\bf x}', {\bf x}') } } \right) ~~~ (l \neq 0) 
+          \end{cases}
+        \end{align}
+        とする．以上の結果から，入力から第$l$層の各ユニットの出力値を得る関数$f^{(l)}_i: \mathcal{X} \to \mathbb{R}$は以下のガウス過程で近似できる．
+        \begin{align}
+          f^{(l)}_i(\cdot) \sim \mathcal{GP}( 0, k^{(l)}(\cdot,\cdot) ), ~~~ (i=1,\dots,N^{(l)})
+        \end{align}
 
   \section{Kernel Variational AutoEncoder}
     前章での議論から，GP-LVMにおける潜在変数$X$と観測関数$Y$に対する確率モデル$p(Y|X)$を，
