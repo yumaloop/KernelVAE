@@ -1,7 +1,12 @@
 # Fdb version 3
-["pdflatex"] 1573530178 "/Users/uchiumi/workspace/KernelVAE/docs/main.tex" "/Users/uchiumi/workspace/KernelVAE/docs/main.pdf" "main" 1573530178
-  "/Users/uchiumi/workspace/KernelVAE/docs/main.aux" 1573530178 8 a94a2480d3289e625eea47cd1b285758 ""
-  "/Users/uchiumi/workspace/KernelVAE/docs/main.tex" 1573530177 31955 5346a57b64315919a2b16932497b419b ""
+["bibtex main"] 0 "main.aux" "main.bbl" "main" 0
+  "main.aux" 0 -1 0 ""
+  (generated)
+  "main.bbl"
+  "main.blg"
+["pdflatex"] 1573734477 "/Users/uchiumi/workspace/KernelVAE/docs/main.tex" "/Users/uchiumi/workspace/KernelVAE/docs/main.pdf" "main" 1573734477
+  "/Users/uchiumi/workspace/KernelVAE/docs/main.aux" 1573734477 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/Users/uchiumi/workspace/KernelVAE/docs/main.tex" 1573734476 33935 64a365b5afe7cfa49b13c9b11302ca2a ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1480098698 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1480098698 1120 200be8b775682cdf80acad4be5ef57e4 ""
@@ -61,13 +66,15 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1551164633 4220280 7da30aecdae615f574c9b1047b5c6c1d ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
+  "figures/dnn_gp.eps" 1572570987 71847 5bc5e054f6116239b4f06b5582eab817 ""
   "main.aux" 0 -1 0 ""
-  "main.tex" 1573530177 31955 5346a57b64315919a2b16932497b419b ""
+  "main.bbl" 1573734478 0 d41d8cd98f00b204e9800998ecf8427e "bibtex main"
+  "main.tex" 1573734476 33935 64a365b5afe7cfa49b13c9b11302ca2a ""
   "main.toc" 0 -1 0 ""
   (generated)
-  "main.pdf"
-  "/Users/uchiumi/workspace/KernelVAE/docs/main.log"
-  "/Users/uchiumi/workspace/KernelVAE/docs/main.pdf"
   "main.log"
   "main.toc"
+  "/Users/uchiumi/workspace/KernelVAE/docs/main.log"
+  "/Users/uchiumi/workspace/KernelVAE/docs/main.pdf"
+  "main.pdf"
   "main.aux"

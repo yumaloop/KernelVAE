@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2019.2.26)  12 NOV 2019 15:44
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2019.2.26)  14 NOV 2019 21:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -209,45 +209,76 @@ Overfull \hbox (89.75801pt too wide) detected at line 183
  []
 
 [4] [5] [6]
-Overfull \hbox (66.2164pt too wide) in paragraph at lines 283--286
+Overfull \hbox (66.2164pt too wide) in paragraph at lines 288--291
 \JY1/mc/m/n/10.95 が成り立つ ． すなわち $\OML/cmm/m/it/10.95 n$ \JY1/mc/m/n/10
 .95 個の入力 $[][]$ が与えられたとき ， $\OT1/cmr/bx/n/10.95 z[] \OT1/cmr/m/n/1
 0.95 = [][] \OMS/cmsy/m/n/10.95 2
  []
 
-[7]
+[7] [8]
 File: ./figures/dnn_gp.eps Graphic file (type eps)
 <./figures/dnn_gp.eps>
- [8] [9] [10] [11]
+ [9] [10] [11]
 
 LaTeX Font Warning: Font shape `JT1/mc/m/it' undefined
-(Font)              using `JT1/mc/m/n' instead on input line 402.
+(Font)              using `JT1/mc/m/n' instead on input line 407.
 
 
 LaTeX Font Warning: Font shape `JY1/mc/m/it' undefined
-(Font)              using `JY1/mc/m/n' instead on input line 402.
+(Font)              using `JY1/mc/m/n' instead on input line 407.
 
-[12] [13] (./main.bbl [14]
+[12] [13] [14]
+Overfull \hbox (28.73459pt too wide) detected at line 520
+[]
+ []
 
-LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
-(Font)              using `JT1/gt/m/n' instead on input line 18.
+
+LaTeX Warning: Citation `Hinton1995BayesianLF' on page 15 undefined on input li
+ne 529.
 
 
-LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
-(Font)              using `JY1/gt/m/n' instead on input line 18.
+LaTeX Warning: Citation `DLGP2018' on page 15 undefined on input line 530.
 
-[15]) [16] (./main.aux)
+
+LaTeX Warning: Citation `KMDL2009' on page 15 undefined on input line 530.
+
+
+LaTeX Warning: Citation `LawrenceGPLVM2004' on page 15 undefined on input line 
+530.
+
+
+LaTeX Warning: Citation `LawrenceGPLVM2005' on page 15 undefined on input line 
+530.
+
+
+LaTeX Warning: Citation `SparseGP2006' on page 15 undefined on input line 531.
+
+
+LaTeX Warning: Citation `VariationalSparseGP2009' on page 15 undefined on input
+ line 531.
+
+
+LaTeX Warning: Citation `BayesGP2010' on page 15 undefined on input line 531.
+
+
+LaTeX Warning: Citation `GPBIGDATA2013' on page 15 undefined on input line 532.
+
+
+(./main.bbl) [15] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 1719 strings out of 493281
- 20220 string characters out of 6145041
+ 1704 strings out of 493281
+ 20001 string characters out of 6145041
  94187 words of memory out of 5000000
- 5633 multiletter control sequences out of 15000+600000
+ 5618 multiletter control sequences out of 15000+600000
  24233 words of font info for 95 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 30i,20n,27p,227b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,20n,27p,388b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (16 pages, 53940 bytes).
+Output written on main.dvi (15 pages, 54344 bytes).

@@ -228,11 +228,16 @@
           \begin{align}
             \frac{\partial \log p({\bf Y}^n|{\bf X}^n)}{\partial {\bf \Sigma}_{nn}} &= {\bf \Sigma}_{nn}^{-1} {\bf Y}{\bf Y}^{\mathrm{T}} {\bf \Sigma}_{nn}^{-1} - D {\bf \Sigma}_{nn}^{-1} 
           \end{align}
-          よって，対数尤度の${\bf X}^n$に対する勾配$\partial \log p({\bf Y}^n|{\bf X}^n) / \partial {\bf X}^n$は，
-          $\partial {\bf \Sigma}_{nn} / \partial {\bf X}^n = \partial {\bf K}_{nn} / \partial {\bf X}^n$と連鎖律を用いて計算される．
+          よって，対数尤度の${\bf x}_{ij}$に対する勾配$\partial \log p({\bf Y}^n|{\bf X}^n) / \partial {\bf x}_{ij}$は，
+          $\partial {\bf \Sigma}_{nn} / \partial {\bf x}_{ij} = \partial {\bf K}_{nn} / \partial {\bf x}_{ij}$と連鎖律を用いて計算される．
           \begin{align}
-            \frac{\partial \log p({\bf Y}^n | {\bf X}^n) }{ \partial {\bf X}^n } &= \frac{\partial \log p({\bf Y}^n | {\bf X}^n) }{\partial {\bf \Sigma}_{nn} } \frac{\partial {\bf \Sigma}_{nn}}{\partial {\bf X}^n} \\
-            &= \left( {\bf \Sigma}_{nn}^{-1} {\bf Y}{\bf Y}^{\mathrm{T}} {\bf \Sigma}_{nn}^{-1} - D {\bf \Sigma}_{nn}^{-1} \right) \frac{\partial {\bf K}_{nn} }{\partial {\bf X}^n }
+            \frac{\partial \log p({\bf Y}^n | {\bf X}^n) }{ \partial {\bf x}_{ij} } 
+            &= \frac{\partial \log p({\bf Y}^n | {\bf X}^n) }{\partial {\bf \Sigma}_{nn} } \frac{\partial {\bf \Sigma}_{nn}}{\partial {\bf x}_{ij} } \\
+            &= \left( {\bf \Sigma}_{nn}^{-1} {\bf Y}{\bf Y}^{\mathrm{T}} {\bf \Sigma}_{nn}^{-1} - D {\bf \Sigma}_{nn}^{-1} \right) \frac{\partial {\bf K}_{nn} }{\partial {\bf x}_{ij} }
+          \end{align}
+          これによって，${\bf x}_{ij}$を逐次更新できる．
+          \begin{align}
+            {\bf x}_{ij} \gets {\bf x}_{ij} - \eta \cdot \frac{\partial \log p({\bf Y}^n | {\bf X}^n) }{ \partial {\bf x}_{ij} } 
           \end{align}
 
         \paragraph{MAP推定}
@@ -498,6 +503,26 @@
     を考える．
 
     \subsection{変分推論}
+
+
+    \newpage
+
+    \subsection{びぶん}
+      \begin{align}
+        \frac{\partial k^{(l)}({\bf x}, {\bf x}')}{\partial {\bf x}} &= 
+        \frac{1}{\pi \sigma} \left\{ \frac{\partial k^{(l-1)}({\bf x}, {\bf x}')}{\partial {\bf x}} J(\theta^{(l-1)}) + k^{(l-1)}({\bf x}, {\bf x}') \frac{\partial J(\theta^{(l-1)})}{\partial {\bf x}} \right\} \\
+        \frac{\partial k^{(1)}({\bf x}, {\bf x}')}{\partial {\bf x}} &= \frac{\| {\bf x}' \|}{\pi \sigma} \left\{ \frac{\bf x}{\| {\bf x} \|} J(\theta^{(0)}) + \|{\bf x}\| \frac{\partial J(\theta^{(0)})}{\partial {\bf x}} \right\}
+      \end{align}
+
+      \begin{align}
+        \frac{\partial J(\theta^{(l)})}{\partial {\bf x}} &= \frac{ \pi - \theta^{(l)}}{ \sin \theta^{(l)}} \left\{ \frac{1}{\sqrt{k^{(l)}({\bf x}, {\bf x}) k^{(l)}({\bf x}', {\bf x}') }} \frac{\partial k^{(l)}({\bf x}, {\bf x}')}{\partial {\bf x}} - \frac{\cos \theta^{(l)}}{2 k^{(l)}({\bf x}, {\bf x}')} \frac{\partial k^{(l)}({\bf x}, {\bf x})}{\partial {\bf x}} \right\} \\
+        \frac{\partial J(\theta^{(0)})}{\partial {\bf x}} &= \frac{ \pi - \theta^{(0)}}{ \sin \theta^{(0)}} \left\{ \frac{1}{ \|{\bf x}\| \|{\bf x}'\| } {\bf x}' - \frac{\|{\bf x}'\| \cos \theta^{(0)}}{{\|{\bf x}\|}^2} {\bf x} \right\}
+      \end{align}
+
+      \begin{align}
+        \frac{\partial k^{(l)}({\bf x}, {\bf x})}{\partial {\bf x}} &= \frac{1}{\pi \sigma} \left\{ \frac{\partial k^{(l-1)}({\bf x}, {\bf x})}{\partial {\bf x}} + k^{(l-1)}({\bf x}, {\bf x}) \frac{\partial J(\theta^{(l-1)})}{\partial {\bf x}} \right\} \\
+        \frac{\partial k^{(1)}({\bf x}, {\bf x})}{\partial {\bf x}} &= \frac{\sin \theta^{(0)} + (\pi - \theta^{(0)}) \cos \theta^{(0)} }{\pi \sigma}
+      \end{align}
 
   \section{Experiments}
   \section{Conclusion}
