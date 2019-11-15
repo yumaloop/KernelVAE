@@ -3,7 +3,7 @@
 \contentsline {subsection}{\numberline {2.1}ガウス分布}{2}
 \contentsline {paragraph}{分布の再生性}{2}
 \contentsline {paragraph}{条件つき分布の計算}{2}
-\contentsline {subsection}{\numberline {2.2}ガウス過程(GP)}{2}
+\contentsline {subsection}{\numberline {2.2}ガウス過程(GP)}{3}
 \contentsline {subsection}{\numberline {2.3}ガウス過程回帰(GPR)}{3}
 \contentsline {subsection}{\numberline {2.4}ガウス過程潜在変数モデル(GP-LVM)}{5}
 \contentsline {paragraph}{最尤推定}{6}
@@ -20,3 +20,4 @@
 \contentsline {subsection}{\numberline {4.2}びぶん}{15}
 \contentsline {section}{\numberline {5}Experiments}{15}
 \contentsline {section}{\numberline {6}Conclusion}{15}
+\contentsline {section}{\numberline {7}Appendix}{16}

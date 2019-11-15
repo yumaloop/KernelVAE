@@ -509,19 +509,24 @@
 
     \subsection{びぶん}
       \begin{align}
-        \frac{\partial k^{(l)}({\bf x}, {\bf x}')}{\partial {\bf x}} &= 
-        \frac{1}{\pi \sigma} \left\{ \frac{\partial k^{(l-1)}({\bf x}, {\bf x}')}{\partial {\bf x}} J(\theta^{(l-1)}) + k^{(l-1)}({\bf x}, {\bf x}') \frac{\partial J(\theta^{(l-1)})}{\partial {\bf x}} \right\} \\
-        \frac{\partial k^{(1)}({\bf x}, {\bf x}')}{\partial {\bf x}} &= \frac{\| {\bf x}' \|}{\pi \sigma} \left\{ \frac{\bf x}{\| {\bf x} \|} J(\theta^{(0)}) + \|{\bf x}\| \frac{\partial J(\theta^{(0)})}{\partial {\bf x}} \right\}
+        \frac{\partial k^{(l)}({\bf x}, {\bf x}')}{\partial {\bf x}} 
+        &= \frac{1}{\pi \sigma^N} \Biggl\{ \frac{1}{2} \sqrt{\frac{k^{(l-1)}({\bf x}', {\bf x}')}{k^{(l-1)}({\bf x}, {\bf x})}} \frac{\partial k^{(l-1)}({\bf x}, {\bf x}) }{\partial {\bf x}} \\
+        &\hspace{3em}                   + \frac{1}{2} \sqrt{ \frac{k^{(l-1)}({\bf x}, {\bf x})}{k^{(l-1)}({\bf x}', {\bf x}')} } \frac{\partial k^{(l-1)}({\bf x}', {\bf x}') }{\partial {\bf x}} \\
+        &\hspace{3em}                   + \sqrt{k^{(l-1)}({\bf x}, {\bf x}) k^{(l-1)}({\bf x}', {\bf x}')} \frac{\partial J(\theta^{(l-1)})}{\partial {\bf x}} \Biggr\} \\
+        \frac{\partial k^{(1)}({\bf x}, {\bf x}')}{\partial {\bf x}} 
+        &= \frac{\| {\bf x}' \|}{\pi \sigma^N} \left\{ \frac{\bf x}{\| {\bf x} \|} J(\theta^{(0)}) + \|{\bf x}\| \frac{\partial J(\theta^{(0)})}{\partial {\bf x}} \right\} \\
       \end{align}
 
       \begin{align}
         \frac{\partial J(\theta^{(l)})}{\partial {\bf x}} &= \frac{ \pi - \theta^{(l)}}{ \sin \theta^{(l)}} \left\{ \frac{1}{\sqrt{k^{(l)}({\bf x}, {\bf x}) k^{(l)}({\bf x}', {\bf x}') }} \frac{\partial k^{(l)}({\bf x}, {\bf x}')}{\partial {\bf x}} - \frac{\cos \theta^{(l)}}{2 k^{(l)}({\bf x}, {\bf x}')} \frac{\partial k^{(l)}({\bf x}, {\bf x})}{\partial {\bf x}} \right\} \\
-        \frac{\partial J(\theta^{(0)})}{\partial {\bf x}} &= \frac{ \pi - \theta^{(0)}}{ \sin \theta^{(0)}} \left\{ \frac{1}{ \|{\bf x}\| \|{\bf x}'\| } {\bf x}' - \frac{\|{\bf x}'\| \cos \theta^{(0)}}{{\|{\bf x}\|}^2} {\bf x} \right\}
+        \frac{\partial J(\theta^{(0)})}{\partial {\bf x}} &= \frac{ \pi - \theta^{(0)}}{ \sin \theta^{(0)}} \left\{ \frac{1}{ \|{\bf x}\| \|{\bf x}'\| } {\bf x}' - \frac{ \cos \theta^{(0)}}{{\|{\bf x}\|}^2} {\bf x} \right\}
       \end{align}
 
       \begin{align}
-        \frac{\partial k^{(l)}({\bf x}, {\bf x})}{\partial {\bf x}} &= \frac{1}{\pi \sigma} \left\{ \frac{\partial k^{(l-1)}({\bf x}, {\bf x})}{\partial {\bf x}} + k^{(l-1)}({\bf x}, {\bf x}) \frac{\partial J(\theta^{(l-1)})}{\partial {\bf x}} \right\} \\
-        \frac{\partial k^{(1)}({\bf x}, {\bf x})}{\partial {\bf x}} &= \frac{\sin \theta^{(0)} + (\pi - \theta^{(0)}) \cos \theta^{(0)} }{\pi \sigma}
+        \frac{\partial k^{(l)}({\bf x}, {\bf x})}{\partial {\bf x}} 
+        &= \frac{1}{\pi \sigma^N} \left\{ \frac{\partial k^{(l-1)}({\bf x}, {\bf x})}{\partial {\bf x}} + k^{(l-1)}({\bf x}, {\bf x}) \frac{\partial J(\theta^{(l-1)})}{\partial {\bf x}} \right\} \\
+        \frac{\partial k^{(1)}({\bf x}, {\bf x})}{\partial {\bf x}} 
+        &= \frac{1}{\pi \sigma^N} \left\{ 2 {\bf x} J(\theta^{(0)}) + \frac{\pi - \theta^{(0)}}{\sin \theta^{(0)}} \left( \frac{\|{\bf x}\|}{\|{\bf x}'\|}{\bf x}' - \cos \theta^{(0)} {\bf x} \right) \right\}
       \end{align}
 
   \section{Experiments}
@@ -531,7 +536,71 @@
     \cite{SparseGP2006} \cite{VariationalSparseGP2009} \cite{BayesGP2010}
     \cite{GPBIGDATA2013}
 
+  \section{Appendix}
+    \begin{align}
+      \frac{\partial k^{(1)}({\bf x}, {\bf x}')}{\partial {\bf x}} 
+      &= \frac{\partial}{\partial {\bf x}} \left\{ \frac{1}{\pi \sigma^N} \|{\bf x}\| \|{\bf x}'\| J(\theta^{(0)}) \right\} \\
+      &= \frac{ \|{\bf x}'\| }{\pi \sigma^N} \left\{ \frac{\bf x}{\|{\bf x}\|} J(\theta^{(0)}) + \|{\bf x}\| \frac{\partial J(\theta^{(0)})}{\partial {\bf x}} \right\} \\
+    \end{align}
+     
+    \begin{align}      
+      \frac{\partial k^{(l)}({\bf x}, {\bf x}')}{\partial {\bf x}} 
+      &= \frac{\partial}{\partial {\bf x}} \left\{ \frac{1}{\pi \sigma^N} \sqrt{ k^{(l-1)}({\bf x}, {\bf x}) } \sqrt{ k^{(l-1)}({\bf x}', {\bf x}') } J(\theta^{(l-1)}) \right\} \\
+      &= \frac{ \sqrt{ k^{(l-1)}({\bf x}', {\bf x}') } }{\pi \sigma^N} \left\{ \frac{1}{2 \sqrt{ k^{(l-1)}({\bf x}, {\bf x}) }} \frac{\partial k^{(l-1)}({\bf x}, {\bf x}) }{\partial {\bf x}} J(\theta^{l-1}) + \sqrt{ k^{(l-1)}({\bf x}, {\bf x}) } \frac{\partial J(\theta^{(l-1)})}{\partial {\bf x}} \right\} \\
+      &+ \frac{1}{\pi \sigma^N} \frac{1}{2 \sqrt{k^{(l-1)}({\bf x}', {\bf x}')}} \frac{\partial k^{(l-1)}({\bf x}', {\bf x}')}{\partial {\bf x}} \left( \sqrt{ k^{(l-1)}({\bf x}, {\bf x}) } J(\theta^{(l-1)}) \right) \\
+      &= \frac{1}{\pi \sigma^N} \Biggl\{ \frac{1}{2} \sqrt{\frac{k^{(l-1)}({\bf x}', {\bf x}')}{k^{(l-1)}({\bf x}, {\bf x})}} \frac{\partial k^{(l-1)}({\bf x}, {\bf x}) }{\partial {\bf x}} \\
+      &\hspace{3em}                   + \frac{1}{2} \sqrt{ \frac{k^{(l-1)}({\bf x}, {\bf x})}{k^{(l-1)}({\bf x}', {\bf x}')} } \frac{\partial k^{(l-1)}({\bf x}', {\bf x}') }{\partial {\bf x}} \\
+      &\hspace{3em}                   + \sqrt{k^{(l-1)}({\bf x}, {\bf x}) k^{(l-1)}({\bf x}', {\bf x}')} \frac{\partial J(\theta^{(l-1)})}{\partial {\bf x}} \Biggr\}
+    \end{align}
 
+    \begin{align}
+      \frac{\partial k^{(1)}({\bf x}, {\bf x})}{\partial {\bf x}} 
+      &= \frac{\partial}{\partial {\bf x}} \left\{ \frac{1}{\pi \sigma^N} {\|{\bf x}\|}^2 J(\theta^{0}) \right\} \\
+      &= \frac{1}{\pi \sigma^N} \left\{ 2 {\bf x} J(\theta^{(0)}) + {\|{\bf x}\|}^2 \frac{\partial J(\theta^{0})}{\partial \theta^{(0)}} \frac{\partial \theta^{(0)}}{\partial {\bf x}} \right\} \\
+      &= \frac{1}{\pi \sigma^N} \left\{ 2 {\bf x} J(\theta^{(0)}) + {\|{\bf x}\|}^2 \frac{\partial J(\theta^{0})}{\partial \theta^{(0)}} \frac{\partial}{\partial {\bf x}} \cos^{-1} \left( \frac{ {\bf x}^{\mathrm{T}} {\bf x}'}{\|{\bf x}\| \|{\bf x}'\|} \right) \right\} \\
+      &= \frac{1}{\pi \sigma^N} \left\{ 2 {\bf x} J(\theta^{(0)}) + {\|{\bf x}\|}^2 \frac{\partial J(\theta^{0})}{\partial \theta^{(0)}} \frac{-1}{1 - { \left( \frac{ {\bf x}^{\mathrm{T}} {\bf x}'}{\|{\bf x}\| \|{\bf x}'\|} \right) }^2} \frac{1}{\|{\bf x}'\|} \frac{{\bf x}'\|{\bf x}\| - {\bf x}^{\mathrm{T}}{\bf x}' \frac{\bf x}{\|{\bf x}\|}}{{\|{\bf x}\|}^2} \right\} \\
+      &= \frac{1}{\pi \sigma^N} \left\{ 2 {\bf x} J(\theta^{(0)}) + {\|{\bf x}\|}^2 \frac{\pi - \theta^{(0)}}{\sin \theta^{(0)}} \frac{1}{\|{\bf x}'\|} \frac{{\bf x}'\|{\bf x}\| - {\bf x}^{\mathrm{T}}{\bf x}' \frac{\bf x}{\|{\bf x}\|}}{{\|{\bf x}\|}^2} \right\} \\
+      &= \frac{1}{\pi \sigma^N} \left\{ 2 {\bf x} J(\theta^{(0)}) + \frac{\pi - \theta^{(0)}}{\sin \theta^{(0)}} \frac{{\bf x}'\|{\bf x}\| - {\bf x}^{\mathrm{T}}{\bf x}' \frac{\bf x}{\|{\bf x}\|}}{{\|{\bf x}'\|}} \right\} \\
+      &= \frac{1}{\pi \sigma^N} \left\{ 2 {\bf x} J(\theta^{(0)}) + \frac{\pi - \theta^{(0)}}{\sin \theta^{(0)}} \left( \frac{\|{\bf x}\|}{\|{\bf x}'\|}{\bf x}' - \cos \theta^{(0)} {\bf x} \right) \right\}
+    \end{align}
+
+    \begin{align}
+      \frac{\partial k^{(l)}({\bf x}, {\bf x})}{\partial {\bf x}} 
+      &= \frac{\partial}{\partial {\bf x}} \left\{ \frac{1}{\pi \sigma^N} k^{(l-1)}({\bf x}, {\bf x}) J(\theta^{(l-1)}) \right\} \\
+      &= \frac{1}{\pi \sigma^N} \left\{ \frac{\partial k^{(l-1)}({\bf x}, {\bf x})}{\partial {\bf x}} + k^{(l-1)}({\bf x}, {\bf x}) \frac{\partial J(\theta^{(l-1)})}{\partial {\bf x}} \right\} \\
+    \end{align}
+
+    \begin{align}
+      \frac{\partial k^{(1)}({\bf x}', {\bf x}')}{\partial {\bf x}} 
+      &= \frac{\partial}{\partial {\bf x}} \left\{ \frac{1}{\pi \sigma^N} {\|{\bf x}'\|}^2 J(\theta^{(0)}) \right\} \\
+      &= \frac{1}{\pi \sigma^N} {\|{\bf x}'\|}^2 \frac{\partial J(\theta^{(0)})}{\partial {\bf x}} \\
+      &= \frac{1}{\pi \sigma^N} {\|{\bf x}'\|}^2 \frac{ \pi - \theta^{(0)}}{ \sin \theta^{(0)}} \left\{ \frac{1}{ \|{\bf x}\| \|{\bf x}'\| } {\bf x}' - \frac{ \cos \theta^{(0)}}{{\|{\bf x}\|}^2} {\bf x} \right\} \\
+      &= \frac{1}{\pi \sigma^N} \frac{ \pi - \theta^{(0)}}{ \sin \theta^{(0)}} \left\{ \frac{\|{\bf x}'\|}{ \|{\bf x}\| } {\bf x}' - \frac{ {\|{\bf x}'\|}^2 \cos \theta^{(0)}}{{\|{\bf x}\|}^2} {\bf x} \right\} 
+    \end{align}
+
+    \begin{align}
+      \frac{\partial k^{(l)}({\bf x}', {\bf x}')}{\partial {\bf x}} 
+      &= \frac{\partial}{\partial {\bf x}} \left\{ \frac{1}{\pi \sigma^N} k^{(l-1)}({\bf x}', {\bf x}') J(\theta^{(l-1)}) \right\} \\
+      &= \frac{1}{\pi \sigma^N} \left\{ \frac{\partial k^{(l-1)}({\bf x}',{\bf x}')}{\partial {\bf x}} J(\theta^{(l-1)}) + k^{(l-1)}({\bf x}', {\bf x}') \frac{\partial J(\theta^{(l-1)})}{\partial {\bf x}} \right\}
+    \end{align}
+
+    \begin{align}
+      \frac{\partial J(\theta^{(0)})}{\partial {\bf x}}
+      &= \frac{\partial J(\theta^{(0)})}{\partial \theta^{(0)}} \frac{\partial \theta^{(0)}}{\partial {\bf x}} \\
+      &= \frac{\partial}{\partial \theta^{(0)}} \left( \sin \theta^{(0)} + (\pi - \theta^{(0)}) \cos \theta^{(0)} \right) \frac{\partial}{\partial {\bf x}} \left( \cos^{-1} \left( \frac{{\bf x}^{\mathrm{T}}{\bf x}'}{\|{\bf x}\| \|{\bf x}'\|} \right) \right) \\
+      &= - (\pi - \theta^{(0)}) \sin \theta^{(0)} \frac{-1}{1 - {\left( \frac{{\bf x}^{\mathrm{T}}{\bf x}'}{\|{\bf x}\| \|{\bf x}'\|} \right)}^2 } \frac{1}{\|{\bf x}'\|} \frac{{\bf x}'\|{\bf x}\| - {\bf x}^{\mathrm{T}}{\bf x}' \frac{\bf x}{\|{\bf x}\|}}{{\|{\bf x}\|}^2} \\
+      &= \frac{ \pi - \theta^{(0)} }{\sin \theta^{(0)}} \frac{1}{\|{\bf x}'\|} \frac{{\bf x}'\|{\bf x}\| - {\bf x}^{\mathrm{T}}{\bf x}' \frac{\bf x}{\|{\bf x}\|}}{{\|{\bf x}\|}^2} \\
+      &= \frac{ \pi - \theta^{(0)}}{ \sin \theta^{(0)}} \left\{ \frac{1}{ \|{\bf x}\| \|{\bf x}'\| } {\bf x}' - \frac{ \cos \theta^{(0)}}{{\|{\bf x}\|}^2} {\bf x} \right\} \\
+    \end{align}
+
+    \begin{align}
+      \frac{\partial J(\theta^{(l)})}{\partial {\bf x}} 
+      &= \frac{\partial J(\theta^{(l)})}{\partial \theta^{(l)}} \frac{\partial \theta^{(l)}}{\partial {\bf x}} \\
+      &= \frac{\partial}{\partial \theta^{(l)}} \left( \sin \theta^{(l)} + (\pi - \theta^{(l)}) \cos \theta^{(l)} \right) \frac{\partial}{\partial {\bf x}} \left\{ \cos^{-1} \left( \frac{k^{(l)}( {\bf x}, {\bf x}' )}{ \sqrt{ k^{(l)}({\bf x}, {\bf x}) } \sqrt{ k^{(l)}({\bf x}', {\bf x}') } } \right) \right\} \\
+      &= - (\pi - \theta^{(l)}) \sin \theta^{(l)} \frac{-1}{1 - {\left( \frac{k^{(l)}( {\bf x}, {\bf x}' )}{ \sqrt{ k^{(l)}({\bf x}, {\bf x}) } \sqrt{ k^{(l)}({\bf x}', {\bf x}') } } \right)}^2 } \\
+      &\frac{1}{\sqrt{ k^{(l)}({\bf x}', {\bf x}') }} \frac{ \frac{\partial k^{(l)}({\bf x},{\bf x}')}{\partial {\bf x}} \sqrt{k^{(l)}({\bf x},{\bf x})} - k^{(l)}({\bf x},{\bf x}') \frac{1}{2 \sqrt{k^{(l)}({\bf x},{\bf x})}} \frac{\partial k^{(l)}({\bf x},{\bf x})}{\partial {\bf x}}  }{ k^{(l)}({\bf x}, {\bf x}) } \\
+      &= \frac{ \pi - \theta^{(l)}}{ \sin \theta^{(l)}} \left\{ \frac{1}{\sqrt{k^{(l)}({\bf x}, {\bf x}) k^{(l)}({\bf x}', {\bf x}') }} \frac{\partial k^{(l)}({\bf x}, {\bf x}')}{\partial {\bf x}} - \frac{\cos \theta^{(l)}}{2 k^{(l)}({\bf x}, {\bf x}')} \frac{\partial k^{(l)}({\bf x}, {\bf x})}{\partial {\bf x}} \right\} 
+    \end{align}
   \bibliography{ref} %hoge.bibから拡張子を外した名前
   \bibliographystyle{junsrt} %参考文献出力スタイル
   

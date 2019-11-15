@@ -1,49 +1,50 @@
-This is pBibTeX, Version 0.99d-j0.33 (utf8.euc) (TeX Live 2018)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is pBibTeX, Version 0.99d-j0.33 (utf8.euc) (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
-I found no \citation commands---while reading file main.aux
-I found no \bibdata command---while reading file main.aux
-I found no \bibstyle command---while reading file main.aux
-You've used 0 entries,
-            0 wiz_defined-function locations,
-            84 strings with 495 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
+The style file: junsrt.bst
+Database file #1: ref.bib
+Warning--empty booktitle in Hinton1995BayesianLF
+Warning--empty booktitle in DLGP2018
+You've used 9 entries,
+            2270 wiz_defined-function locations,
+            617 strings with 6195 characters,
+and the built_in function-call counts, 3822 in all, are:
+= -- 333
+> -- 109
+< -- 10
++ -- 41
+- -- 32
+* -- 202
+:= -- 463
+add.period$ -- 33
+call.type$ -- 9
+change.case$ -- 9
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
+cite$ -- 11
+duplicate$ -- 237
+empty$ -- 363
+format.name$ -- 64
+if$ -- 959
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
+int.to.str$ -- 9
+missing$ -- 9
+newline$ -- 48
+num.names$ -- 17
+pop$ -- 64
+preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 0
+skip$ -- 191
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 240
+swap$ -- 81
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 0
-is.kanji.str$ -- 0
-(There were 3 error messages)
+warning$ -- 2
+while$ -- 34
+width$ -- 10
+write$ -- 111
+is.kanji.str$ -- 120
+(There were 2 warnings)
